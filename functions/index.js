@@ -31,11 +31,11 @@ exports.recursiveDelete = functions
         project: process.env.GCLOUD_PROJECT,
         recursive: true,
         yes: true,
-        token: functions.config().fb.token
+        token: context.auth.token
       })
       .then(() => {
         return {
-          path: path 
+          path: path
         };
       });
   });
