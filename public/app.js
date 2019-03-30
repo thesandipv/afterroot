@@ -1,1 +1,3 @@
-console.log('hello world');
+import {MDCList} from '@material/list';
+
+new MDCList(document.querySelector('.mdc-list'));
