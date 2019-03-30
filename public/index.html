@@ -26,31 +26,24 @@
 
 <body>
   <div class="bg-logo bg-img">
-    <header id="main-header" style="top: 0px;">
-      <div class="container">
-        <div class="logo-container">
-          <span class="logo-span"></span>
-          <a href="https://afterroot.co/">
-            <img src="image/logo_round.png" alt="afterroot" />
-          </a>
-        </div>
-        <div class="pill-nav">
-          <a class="active" href="#home">Home</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
-          <a href="./test.html">Test</a>
-        </div>
+    <aside class="mdc-drawer">
+      <div class="mdc-drawer__header">
+        <a class="ar-logo-drawer" href="https://afterroot.co/">
+          <img src="image/logo_64.png" alt="afterroot" />
+        </a>
+        <h1 class="ar-title">AFTERROOT</h1>
       </div>
-    </header>
-    <div class="middle mdc-typography">
-      <button class="foo-button mdc-button">
-        Button
-      </button>
-    </div>
-    <div>
-
-    </div>
+      <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+          <a class="mdc-list-item mdc-list-item--activated" aria-selected="true" tabindex="0" href="#">
+            <span class="mdc-list-item__text">Home</span>
+          </a>
+          <a class="mdc-list-item" href="#">
+            <span class="mdc-list-item__text">About</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
   </div>
 </body>
 
