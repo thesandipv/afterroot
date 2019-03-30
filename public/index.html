@@ -20,13 +20,12 @@
   <script src="/__/firebase/init.js"></script>
 
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="material.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 </head>
 
 <body>
-  <div class="bg-img">
+  <div class="bg-logo bg-img">
     <header id="main-header" style="top: 0px;">
       <div class="container">
         <div class="logo-container">
@@ -35,18 +34,22 @@
             <img src="image/logo_round.png" alt="afterroot" />
           </a>
         </div>
-        <div class="nav-container">
-          <nav id="navigation">
-            <!-- implement navigation -->
-          </nav>
+        <div class="pill-nav">
+          <a class="active" href="#home">Home</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+          <a href="./test.html">Test</a>
         </div>
       </div>
     </header>
     <div class="middle mdc-typography">
-      <h1 class="mdc-typography--headline1">COMING SOON</h1>
+      <button class="foo-button mdc-button">
+        Button
+      </button>
     </div>
     <div>
-      
+
     </div>
   </div>
 </body>

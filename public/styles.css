@@ -69,11 +69,11 @@ body {
 }
 
 .container {
-  position: relative;
+  display: inline;
+  position: static;
   width: 80%;
   margin: auto;
   max-width: 1080px;
-  position: relative;
   text-align: left;
 }
 
@@ -96,15 +96,14 @@ body, html {
 }
 
 .bg-img {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('image/background.jpg');
+  background-image: linear-gradient( #1424b1a1,#14e79694);
   height: 100%;
+  scale: inherit;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+} 
 
 .middle {
   position: absolute;
@@ -112,4 +111,24 @@ body, html {
   left: 50%; 
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.pill-nav a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.pill-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.pill-nav a.active {
+  background-color: dodgerblue;
+  color: white;
 }
