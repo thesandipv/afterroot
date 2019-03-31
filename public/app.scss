@@ -1,19 +1,75 @@
+$mdc-theme-primary: #455a64;
+$mdc-theme-secondary: #ff5252;
+$mdc-theme-background: #fff;
+
 @import "@material/button/mdc-button";
 @import "@material/typography/mdc-typography";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
+@import "@material/top-app-bar/mdc-top-app-bar";
 
-.ar-logo-drawer {
-  display: block;
-  width: 48px;
-  padding: 40px 0 0;
-  margin: 0 auto;
-  fill: currentColor;
-  transition: background-color .4s,color .4s,transform .4s,opacity .4s ease-in-out;
+body {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.ar-title {
-  @include mdc-typography(body1);
-  text-align: center;
-  margin: 5px auto;
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.bg-img {
+  background-color: #455a64;
+  height: 100%;
+  scale: inherit;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+}
+
+.section-1 {
+  background-color: #f5f5f5;
+  height: 50%;
+}
+.section-2 {
+  background-color: #9e9e9e;
+  height: 50%;
+}
+
+.header {
+  height: 64px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+  position: relative;
+}
+
+.header-logo {
+  width: 48px;
+  fill: currentColor;
+  transition: background-color 0.4s, color 0.4s, transform 0.4s, opacity 0.4s ease-in-out;
+}
+
+.mdc-top-app-bar__title {
+  font-family: Roboto Mono, serif;
+  font-weight: 400;
+}
+
+.mdc-top-app-bar--fixed {
+  display: flex;
+  transition: background-color 0.4s, color 0.4s, transform 0.4s, opacity 0.4s ease-in-out;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.title-bg {
+  margin-top: 100px;
+  font-family: Merienda;  
+  font-weight: 400;
 }
