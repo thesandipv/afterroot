@@ -22,14 +22,15 @@ html {
 }
 
 .bg-img {
-  background-color: #455a64;
+  background-image: url(/image/bg1.jpg);
   height: 100%;
-  scale: inherit;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
 .section-1 {
@@ -68,7 +69,37 @@ html {
 }
 
 .title-bg {
-  margin-top: 100px;
-  font-family: Merienda;  
-  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: #455a64;
+  font-family: Roboto, sans-serif;
+  font-size: 8vw;
+  font-weight: 300;
+  padding-inline-end: 8px;
+  text-align: right;
+  white-space: normal;
+  width: 50%;
+}
+
+.main {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.text-center {
+  margin-top: 200px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+}
+
+.social-menu {
+  display: block;
+}
+
+.btn-fb {
+  float: right;
 }
