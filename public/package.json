@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@material/button": "^3.0.0",
+    "@material/card": "^3.0.0",
     "@material/list": "^3.0.0",
     "@material/ripple": "^3.0.0",
     "@material/top-app-bar": "^3.0.0"
