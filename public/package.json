@@ -22,17 +22,12 @@
     "sass-loader": "^7.1.0",
     "webpack": "^3.12.0",
     "webpack-cli": "^3.3.0",
-<<<<<<< HEAD
-    "webpack-dev-server": "^2.11.5",
-    "@material/list": "^3.0.0",
-=======
     "webpack-dev-server": "^2.11.5"
   },
   "dependencies": {
     "@material/button": "^3.0.0",
     "@material/list": "^3.0.0",
     "@material/ripple": "^3.0.0",
->>>>>>> a5b4f8e3e6028184b0ea6d38446dce513684b79a
     "@material/top-app-bar": "^3.0.0"
   }
 }
