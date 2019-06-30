@@ -22,7 +22,7 @@ html {
 }
 
 .bg-img {
-  background-image: url(/image/bg1.jpg);
+  background-color: #ffffff;
   height: 100%;
   background-position: center;
   background-size: cover;
@@ -59,23 +59,27 @@ html {
 
 .mdc-top-app-bar__title {
   font-family: Roboto Mono, serif;
+  color:#000000 ;
   font-weight: 400;
 }
 
 .mdc-top-app-bar--fixed {
   display: flex;
+  background-color: #ffffff;
   transition: background-color 0.4s, color 0.4s, transform 0.4s, opacity 0.4s ease-in-out;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .title-bg {
   -webkit-font-smoothing: antialiased;
-  color: #455a64;
+  color: #000000;
   font-family: Roboto, sans-serif;
-  font-size: 8vw;
-  font-weight: 300;
-  padding-inline-end: 8px;
-  text-align: right;
+  font-size: 5vw;
+  font-weight: 200;
+  // padding-inline-end: 8px;
+  margin-left: 100px;
+  text-align:center;
+  text-align: center;
   white-space: normal;
   width: 50%;
 }
@@ -85,6 +89,8 @@ html {
   height: 100%;
   width: 100%;
 }
+
+
 .text-center {
   margin-top: 200px;
 }
@@ -96,9 +102,24 @@ html {
   width: 100%;
 }
 
-.social-menu {
-  display: block;
+.material-icons {
+
+  font-family: 'matiral icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap:normal;
+  white-space:nowrap;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
+
+
 }
+
 
 .btn-fb {
   float: right;
