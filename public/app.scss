@@ -53,7 +53,7 @@ html {
 }
 .section-2 {
   background-color: #e0dcdc;
-  height: 80%;
+  height: 90%;
 }
 
 .header {
@@ -122,14 +122,14 @@ html {
   align-self: center;
 }
 
-.social-menu {
-}
+// .social-menu {
+// }
 
-/* .fab {
-  padding: 8px;
-  border-radius: 25%;
-  background: #ff5252;
-} */
+// /* .fab {
+//   padding: 8px;
+//   border-radius: 25%;
+//   background: #ff5252;
+// } */
 
 .material-icons {
   font-family: "matiral icons";
@@ -165,4 +165,11 @@ html {
 .card-with-text {
   padding: 16px;
   text-align: center;
+}
+.card-img
+{
+  padding:1%;
+}
+.footer-text{
+  margin-left:72%;
 }
