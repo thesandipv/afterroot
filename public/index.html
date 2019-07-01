@@ -20,8 +20,7 @@
   <script src="/__/firebase/init.js"></script>
 
   <link rel="stylesheet" href="material.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda">
@@ -75,7 +74,7 @@
     <div class="section-2">
       <div class="container">
         <h5 class="text-sec">Our Services</h5>
-        <div class="card-deck">
+        <!-- <div class="card-deck">
           <div class="card">
             <div class="card-body text-center">
               <p class="card-text">Static Website Design</p>
@@ -96,13 +95,37 @@
               <p class="card-text">Digital Marketing</p>
             </div>
           </div>
+        </div> -->
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell">
+              <div class="mdc-card card-with-text">
+                <h2 class="mdc-typography mdc-typography--headline6">Static Website Design</h2>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell">
+              <div class="mdc-card card-with-text">
+                <h2 class="mdc-typography mdc-typography--headline6">Android Applicaton</h2>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell">
+              <div class="mdc-card card-with-text">
+                <h2 class="mdc-typography mdc-typography--headline6">Mobile Website Design</h2>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell">
+              <div class="mdc-card card-with-text">
+                <h2 class="mdc-typography mdc-typography--headline6">Digital Marketing</h2>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <footer class="page-footer font-small mdb-color darken-3 pt-4">
-      <div class="footer-copyright text-center py-3">
-        <a href="https://afterroot.co">afterroot.co</a>
+    <footer class="my-footer">
+      <span class="copyright-text">© AfterROOT</span>
+      <div class="social-menu">
         <i class="fab fa-facebook-f"></i>
         <i class="fab fa-twitter"></i>
         <i class="fab fa-google-plus-g"></i>
