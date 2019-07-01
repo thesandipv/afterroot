@@ -1,6 +1,19 @@
-$mdc-theme-primary: #455a64;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+
+$mdc-theme-primary: #ffffff;
 $mdc-theme-secondary: #ff5252;
+
 $mdc-theme-background: #fff;
+$mdc-theme-surface: #ffffff;
+$mdc-theme-background: #ffffff;
+$mdc-theme-error: #b00020;
+
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #ffffff;
+$mdc-theme-on-error: #ffffff;
+$mdc-theme-on-surface: #000000;
+
+$mdc-typography-font-family: unquote("Roboto, sans-serif");
 
 @import "@material/button/mdc-button";
 @import "@material/typography/mdc-typography";
@@ -12,7 +25,6 @@ $mdc-theme-background: #fff;
 body {
   background: #fff;
   color: rgba(0, 0, 0, 0.87);
-  font-family: Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -96,12 +108,28 @@ html {
   margin-top: 200px;
 }
 
-.footer {
+.my-footer {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   height: fit-content;
+  justify-content: space-between;
+  padding: 16px;
   width: 100%;
 }
+
+.copyright-text {
+  font-family: Roboto Mono, monospace;
+  align-self: center;
+}
+
+.social-menu {
+}
+
+/* .fab {
+  padding: 8px;
+  border-radius: 25%;
+  background: #ff5252;
+} */
 
 .material-icons {
   font-family: "matiral icons";
@@ -118,9 +146,6 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-.btn-fb {
-  float: right;
-}
 .img-sec1 {
   margin-left: 5%;
   padding: 5%;
@@ -139,4 +164,5 @@ html {
 
 .card-with-text {
   padding: 16px;
+  text-align: center;
 }
