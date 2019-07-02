@@ -1,6 +1,6 @@
 {
   "name": "afterroot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "load_components.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "@material/card": "^3.0.0",
     "@material/layout-grid": "^3.0.0",
     "@material/list": "^3.0.0",
+    "@material/menu": "^3.0.0",
     "@material/ripple": "^3.0.0",
     "@material/top-app-bar": "^3.0.0"
   }
