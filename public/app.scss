@@ -44,7 +44,6 @@ html {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
   align-items: center;
 }
 
@@ -91,24 +90,13 @@ html {
   -webkit-font-smoothing: antialiased;
   color: #000000;
   font-family: "Courgette", cursive;
-  font-size: 5vw;
-  font-weight: 200;
-  // padding-inline-end: 8px;
-  margin-left: 100px;
   text-align: center;
-  text-align: center;
-  white-space: normal;
-  width: 50%;
 }
 
 .main {
   display: block;
   height: 100%;
   width: 100%;
-}
-
-.text-center {
-  margin-top: 200px;
 }
 
 .my-footer {
@@ -125,16 +113,13 @@ html {
   font-family: Roboto Mono, monospace;
 }
 
-.social-menu {
-  align-items: center;
-}
-
 .fab {
   padding: 8px;
+  text-decoration: none;
 }
 
 .material-icons {
-  font-family: "matiral icons";
+  font-family: "material icons";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
