@@ -35,8 +35,9 @@ html {
   width: 100%;
 }
 
-.bg-img {
-  background-color: #ffffff;
+.bg{
+ 
+  background-image: url("/image/img1.png");
   height: 100%;
   background-position: center;
   background-size: cover;
@@ -171,5 +172,12 @@ html {
   padding:1%;
 }
 .footer-text{
-  margin-left:72%;
+  margin-left:75%;
+}
+.menu-text{
+
+  font-family: Roboto Mono, serif;
+  color: #000000;
+  font-weight: 400;
+
 }
