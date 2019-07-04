@@ -21,6 +21,11 @@ $mdc-typography-font-family: unquote("Roboto, sans-serif");
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/card/mdc-card";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+
 
 body {
   background: #fff;
