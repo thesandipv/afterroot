@@ -22,6 +22,7 @@ $mdc-typography-font-family: unquote("Roboto, sans-serif");
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/card/mdc-card";
 
+
 body {
   background: $mdc-theme-background;
 }
@@ -95,12 +96,10 @@ html {
 }
 
 .footer-links {
-  background: #f5f5f5;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  height: fit-content;
   align-items: center;
   padding: 8px;
   width: 100%;
@@ -112,24 +111,11 @@ html {
   text-decoration: none;
 }
 
-.material-icons {
-  font-family: "material icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  text-rendering: optimizeLegibility;
-}
-
 .img-sec1 {
-  padding: 5%;
+  height:275px;
+  width: 550px;
   justify-self: center;
+  padding: 2%;
 }
 
 .text-sec {
@@ -139,6 +125,7 @@ html {
 .text {
   text-align: center;
   font-size: 20px;
+ font-family: Roboto Mono, monospace;
 }
 
 .card-with-text {
@@ -151,3 +138,52 @@ html {
   padding-left: 4px;
   padding-right: 4px;
 }
+
+li {
+  display: list-item;
+  text-align:center;
+
+}
+.foot-menu {
+  list-style: none;
+  padding: 0 1rem 1rem 1rem;
+}
+.social-list {
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+  list-style-type: none;
+  list-style-position: initial;
+  list-style-image: initial;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+}
+
+.pb-2 {
+  padding-bottom: .5rem!important;
+}
+.social-item {
+  margin: 0 .5rem;
+  font-size: 20px;
+}
+.row-copirayt {
+  word-break: break-word;
+
+}
+.footer-text {
+  font-style: normal;
+  color: #f8f5f5;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+}
+.mb-0 {
+  margin-bottom: 0!important;
+}
+.text-align {
+  text-align: center;
+}
+

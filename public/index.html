@@ -18,6 +18,7 @@
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script src="load_components.js"></script>
   <script src="/__/firebase/init.js"></script>
+  <script type="text/javascropt" src="app.js"></script>
 
   <link rel="stylesheet" href="material.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
@@ -28,11 +29,12 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
-    <div class="mdc-top-app-bar__row">
+    <div class="mdc-top-app-bar__row row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
         <!-- <a href="#" class="material-icons mdc-top-app-bar__navigation-icon text-decoration-none">menu</a> -->
         <a href="/" class="brand-lockup">
@@ -42,20 +44,23 @@
       </section>
     </div>
   </header>
+
   <main class="main">
-    <div class="bg ">
-      <h1 class="title-bg display-3">Everything<br>is<br>connected.</h1>
-    </div>
-
-    <div class="section-1">
-      <div class="d-flex flex-wrap justify-content-center">
-        <img class="img-fluid img-sec1" src="/image/bg.jpg" width="400" height="300">
-
+          <div class="bg">
+            <h1 class="title-bg display-3">Everything<br>is<br>connected.</h1>
+          </div>
+    <div class="section-1 row">
+      <div class="d-flex flex-wrap justify-content-center col-md-6">
+        <img class="img-fluid img-sec1" src="/image/wwd.jpg" width="400" height="300">
+      </div>
         <div class="col-md-6" style="align-self: center;">
           <h6 class="text-sec mdc-typography--headline4">What We Do?</h6>
-          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad porro distinctio, perferendis
-            deleniti officiis autem voluptas vitae doloribus, alias harum aperiam nesciunt? Nisi ea magnam atque
-            quisquam, debitis nemo?</p>
+          <p class="text">
+         <strong>AfterROOT,Started just for fun.</strong>But now it has aim.
+         We go to after the root.That's why it's named AfterROOT.
+         Your trust,our Promise.
+         Let's build the world better together from the ROOT.
+          </p>
         </div>
       </div>
     </div>
@@ -74,7 +79,7 @@
             </div>
             <div class="mdc-layout-grid__cell">
               <div class="mdc-card card-with-text">
-                <img class="img-fluid card-img" src="/image/android1.png" height="250">
+                <img class="img-fluid card-img" src="/image/android.png" height="250">
                 <h2 class="mdc-typography mdc-typography--headline6">Android Applicaton</h2>
                 <p><a href="#">Read More</p></a>
               </div>
@@ -96,20 +101,37 @@
       </div>
     </div>
 
-    <footer class="d-block">
-      <div class="footer-links">
-        <a href="#" class="nav-links">Contact Us</a>
-        <a href="/privacy-policy.html" class="nav-links">Privacy Policy</a>
-        <a href="#" class="nav-links">Terms & Conditions</a>
-      </div>
-      <div class="my-footer">
-        <span class="font-roboto-mono">© AfterROOT</span>
-        <div class="d-flex align-items-center">
+    <footer>
 
-          <a class="fab fa-facebook-f" href="https://www.facebook.com/afterroot" target="_blank"></a>
-          <a class="fab fa-twitter" href="https://twitter.com/afterroot" target="_blank"></a>
-          <i class="fab fa-linkedin-in"></i>
+      <div class="footer-text">
+        <ul class="footer-links ">
+          <li class="foot-menu"> <a href="#" class="nav-links">Contact Us</a></li>
+          <li class="foot-menu">  <a href="/privacy-policy.html" class="nav-links">Privacy Policy</a></li>
+          <li class="foot-menu"> <a href="#" class="nav-links">Terms & Conditions</a></li>
+        </ul>
+       </div>
+       <div class="social-list pb-2">
+        
+  <div class="social-item">
+            <a class="fab fa-twitter" href="https://twitter.com/afterroot" target="_blank"></a>
+         </div>
+         <div class="social-item">
+            <a class="fab fa-facebook-f" href="https://www.facebook.com/afterroot" target="_blank"></a>
+         </div>
+         <div class="soc-item">
+            <a class="fab fa-youtube" href="https://www.youtube.com" target="_blank"></a>           
         </div>
+         <div class="social-item">
+            <a class="fab fa-linkedin-in" href="#" target="_blank"></a>
+         </div>
+        
+        <div class="soc-item">
+            <a class="fab fa-instagram" href="https://www.youtube.com" target="_blank"></a>           
+        </div>
+      </div>
+
+      <div class="text-align">
+        <span class="font-roboto-mono "> © AfterROOT 2019 <a href="#" class="text-white"></a> - All Rights Reserved </span>
       </div>
     </footer>
   </main>
