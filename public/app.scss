@@ -71,9 +71,9 @@ section {
   fill: currentColor;
 }
 
-.font-roboto-mono {
-  font-family: Roboto Mono, monospace;
-}
+// .font-roboto-mono {
+//   font-family: Roboto Mono, monospace;
+// }
 
 .mdc-top-app-bar--fixed {
   display: flex;
@@ -146,3 +146,48 @@ section {
   margin: 0 0.5rem;
   font-size: 20px;
 }
+.animate{
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+}
+.title{
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay:0.5s;
+  animation-delay: 0.5s;
+
+}
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform:none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
