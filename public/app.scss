@@ -113,6 +113,7 @@ section {
   color: #000000;
   padding-left: 4px;
   padding-right: 4px;
+  font-weight: 600;
 }
 
 .fab {
@@ -190,4 +191,36 @@ section {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
+.privacyBackground{
+  background-image: url("/image/pp0.jpg");
+  height:70%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 
+}
+.title-privacy {
+  color: #ffffff;
+  font-family: "Courgette", cursive;
+  text-align: center;
+}
+
+.privacy-text{
+  padding:1%;
+  padding-top: 2%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
+.privacy-content{
+  padding:1%;
+  font-family: 'Roboto', sans-serif;
+  font-size:17px;
+}
+.foot-bg{
+  background-image: url("/image/foot1.png");
+  height:40%;
+}
