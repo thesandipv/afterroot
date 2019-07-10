@@ -123,9 +123,11 @@ section {
 
 .fab {
   padding: 8px;
-  text-decoration: none;
+  color: $mdc-theme-on-primary;
 }
 
+.fab:hover {
+  text-decoration: none;
 }
 
 .card-with-text {
@@ -136,10 +138,6 @@ section {
 .social-list {
   padding: 0;
   margin-bottom: 0;
-  list-style: none;
-  list-style-type: none;
-  list-style-position: initial;
-  list-style-image: initial;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
