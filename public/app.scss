@@ -17,6 +17,7 @@ $mdc-typography-font-family: unquote("Roboto, sans-serif");
 
 $enable-responsive-font-sizes: true;
 
+@import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "@material/button/mdc-button";
 @import "@material/typography/mdc-typography";
 @import "@material/list/mdc-list";
@@ -80,13 +81,6 @@ section {
 
 .font-roboto-mono {
   font-family: Roboto Mono, monospace;
-}
-
-.mdc-top-app-bar--fixed {
-  display: flex;
-  color: $mdc-theme-on-primary;
-  transition: background-color 0.4s, color 0.4s, transform 0.4s, opacity 0.4s ease-in-out;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .title-bg {
@@ -165,23 +159,6 @@ section {
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-delay: 0.5s;
-}
-
-.privacyBackground {
-  background-image: url("/image/pp0.jpg");
-  height: 70%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.title-privacy {
-  color: #ffffff;
-  font-family: "Courgette", cursive;
-  text-align: center;
 }
 
 .text-overline {

@@ -31,6 +31,9 @@
     "@material/list": "^3.0.0",
     "@material/menu": "^3.0.0",
     "@material/ripple": "^3.0.0",
-    "@material/top-app-bar": "^3.0.0"
+    "@material/top-app-bar": "^3.0.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   }
 }
