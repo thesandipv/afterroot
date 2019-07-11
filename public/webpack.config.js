@@ -1,6 +1,6 @@
-import autoprefixer from 'autoprefixer';
+const autoprefixer = require('autoprefixer');
 
-export default [{
+module.exports = [{
   entry: ['./app.scss', './app.js'],
   output: {
     filename: 'bundle.js',
