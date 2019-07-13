@@ -4,11 +4,16 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "site",
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "*.log",
+      "app.js",
+      "app.csss",
+      "package.json",
+      "webpack.config.js"
     ]
   },
   "functions": {
