@@ -1,3 +1,8 @@
+#My List
+site/package-lock.json
+site/bundle.js
+site/material.css
+
 # Logs
 logs
 *.log
@@ -62,6 +67,3 @@ node_modules/
 
 # dotenv environment variables file
 .env
-public/package-lock.json
-public/bundle.js
-public/material.css
