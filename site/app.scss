@@ -133,13 +133,38 @@ section {
   padding: 0;
   margin-bottom: 0;
   display: flex;
+  list-style: none;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.social-item {
+.social-list li {
   margin: 0 0.5rem;
-  font-size: 20px;
+}
+
+.social-list a {
+  color: #6f7476;
+  transition: color 0.2s ease-in-out;
+}
+
+icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon svg {
+  fill: currentColor;
+}
+
+.icon--youtube:hover {
+  fill: red;
+}
+
+.icon--instagram:hover {
+  background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+  background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes fadeInLeft {
