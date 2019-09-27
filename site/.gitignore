@@ -3,3 +3,4 @@ package-lock.json
 bundle.js
 material.css
 template/
+.well-known/
