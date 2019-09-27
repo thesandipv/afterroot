@@ -13,23 +13,13 @@
   <meta property="og:url" content="https://afterroot.co/" />
   <meta property="og:description" content="AfterROOT Coming SOON" />
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="/__/firebase/6.6.0/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#reserved-urls -->
-
-  <!-- Initialize Firebase -->
-  <script src="/__/firebase/init.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXG24NGLY6"></script>
-  <script src="bundle.js"></script>
-  <script src="include.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
   <link rel="stylesheet" href="material.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXG24NGLY6"></script>
+  <script src="bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 
 <body>
@@ -47,7 +37,7 @@
 
   <main class="main">
     <section class="eic-section">
-      <h1 class="display-3 title-bg fadeInLeft text-overline">Everything<br>is<br>connected.</h1><br>
+      <h1 class="display-3 title-bg fadeInLeft text-overline">Everything<br>is<br>connected</h1><br>
     </section>
     <section class="section-1">
       <div class="text-white align-self-center text-center" style="background-color: #00000083; width: 100%;">
@@ -70,12 +60,12 @@
                 <img class="img-fluid card-img" src="/image/prlogo.png" height="250">
                 <h2 class="mdc-typography mdc-typography--headline6">Pointer Replacer</h2>
                 <p><button href="#" class="mdc-button mdc-button--unelevated">
-                    <span class="mdc-button__label" onclick="location='/apps'">Learn More</span>
+                    <a class="mdc-button__label" onclick="location='/apps'" href="./apps/">Learn More</a>
                   </button>
                 </p>
               </div>
             </div>
-             <div class="mdc-layout-grid__cell">
+            <div class="mdc-layout-grid__cell">
               <div class="mdc-card card-with-text">
                 <img class="img-fluid card-img" src="/image/showtouchlogo.png" height="250">
                 <h2 class="mdc-typography mdc-typography--headline6">ShowTouchesEnabler</h2>
@@ -101,10 +91,19 @@
     </section>
 
     <div w3-include-html="footer.html"></div>
-    <script>
-      includeHTML();
-    </script>
+    <script src="include.js"></script>
+    <script>includeHTML();</script>
   </main>
+
+  <script defer src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script defer src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script defer src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+  <script defer src="myfirebase.js"></script>
 </body>
 
 </html>

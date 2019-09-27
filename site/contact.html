@@ -9,10 +9,6 @@
   <link rel="stylesheet" href="material.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,54 +28,10 @@
     <div class="privacyBackground">
       <h1 class="title-privacy display-3 fadeInLeft">Contact Us</h1>
     </div>
-    <div class="row" style="margin-top:16px;">
-      <div class="col-lg-5">
-        <p class="contant-text">Get Social</p>
-
-        <a class="fab fa-twitter contact-icon" href="https://twitter.com/afterroot" target="_blank"></a>
-        <a class="fab fa-youtube contact-icon" href="https://www.youtube.com" target="_blank" style="color: red;"></a>
-        <a class="fab fa-facebook-f contact-icon" href="https://www.facebook.com/afterroot" target="_blank"
-          style="color: rgb(19, 90, 245);"></a>
-
-        <!-- <a class="fab fa-linkedin-in" href="#" target="_blank"></a> -->
-        <a class="fab fa-instagram contact-icon" href="https://www.instagram.com/afterroot" target="_blank"
-          style="color: rgb(214, 55, 166);"></a>
-
-        <p class="contant-text">Contact Info</p>
-        <div class="row">
-          <div class="col-lg-1">
-            <a class="fas fa-map-marker-alt contact-icon" href="#" target="_blank" style="color: rgb(0, 0, 0);"></a>
-          </div>
-          <div class="col-lg-4" style="text-align: center;">
-            <p>Surat,India</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-7">
-        contact us
-      </div>
-    </div>
-
-    <footer>
-      <div class="dropdown-divider"></div>
-      <div class="footer-links">
-        <a class="footer-item" href="/contact.html">Contact Us</a>
-        <a class="footer-item" href="/privacy-policy.html">Privacy Policy</a>
-        <a class="footer-item" href="#">Terms & Conditions</a>
-      </div>
-      <div class="social-list">
-        <a class="fab fa-twitter" href="https://twitter.com/afterroot" target="_blank"></a>
-        <a class="fab fa-facebook-f" href="https://www.facebook.com/afterroot" target="_blank"></a>
-        <a class="fab fa-youtube" href="https://www.youtube.com" target="_blank"></a>
-        <!-- <a class="fab fa-linkedin-in" href="#" target="_blank"></a> -->
-        <a class="fab fa-instagram" href="https://www.instagram.com/afterroot" target="_blank"></a>
-      </div>
-
-      <div class="footer-links justify-content-center">
-        <span class="mdc-typography" style="font-size: 0.7em;">© AfterROOT 2019</span>
-      </div>
-    </footer>
+    <div w3-include-html="footer.html"></div>
+    <script src="include.js"></script>
+    <script>includeHTML();</script>
+  </main>
 
 </body>
 
