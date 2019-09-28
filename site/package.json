@@ -5,7 +5,7 @@
   "main": "load_components.js",
   "scripts": {
     "build": "webpack -p",
-    "start": "webpack-dev-server"
+    "debug": "webpack-dev-server"
   },
   "author": "AfterROOT",
   "license": "ISC",
