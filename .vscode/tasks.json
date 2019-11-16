@@ -21,7 +21,10 @@
             "dependsOn": [
                 "build"
             ],
-            "dependsOrder": "sequence"
+            "dependsOrder": "sequence",
+            "options": {
+                "statusbar": {"hide": true}
+            }
         },
         {
             "label": "build",
@@ -31,6 +34,9 @@
             "problemMatcher": [
                 "$eslint-compact"
             ],
+            "options": {
+                "statusbar": {"hide": true},
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
