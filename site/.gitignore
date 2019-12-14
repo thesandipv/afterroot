@@ -1,6 +1,6 @@
 #My List
 package-lock.json
-output.js
+main.bundle.js
 output.css
 template/
 .well-known/
