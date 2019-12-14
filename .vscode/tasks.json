@@ -23,7 +23,9 @@
             ],
             "dependsOrder": "sequence",
             "options": {
-                "statusbar": {"hide": true}
+                "statusbar": {
+                    "hide": true
+                }
             }
         },
         {
@@ -35,7 +37,9 @@
                 "$eslint-compact"
             ],
             "options": {
-                "statusbar": {"hide": true},
+                "statusbar": {
+                    "hide": true
+                },
             },
             "group": {
                 "kind": "build",
@@ -51,7 +55,12 @@
             "group": {
                 "kind": "test",
                 "isDefault": true
-            }
+            },
+            "options": {
+                "statusbar": {
+                    "hide": false
+                },
+            },
         }
     ]
 }

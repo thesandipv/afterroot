@@ -12,8 +12,7 @@
     },
     "parserOptions": {
         "ecmaVersion": 2018,
-        "sourceType": "script"
+        "sourceType": "module"
     },
-    "rules": {
-    }
+    "rules": {}
 }
