@@ -1,29 +1,12 @@
 const autoprefixer = require('autoprefixer');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = [{
-  mode: 'development',
-  entry: ['./src/app.scss', './src/app.js', './src/include.js'],
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      title: "AfterROOT - Everything's connected."
-    }),
-  ],
+  entry: ['./app.scss', './app.js'],
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: 'output.js',
   },
   module: {
     rules: [
-      {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          'file-loader',
-        ],
-      },
       {
         test: /\.scss$/,
         use: [
@@ -44,10 +27,7 @@ module.exports = [{
           {
             loader: 'sass-loader',
             options: {
-              sassOptions: {
-                includePaths: ['./node_modules'],
-                implementation: require('sass'),
-              }
+              includePaths: ['./node_modules']
             }
           }
         ]
@@ -56,7 +36,7 @@ module.exports = [{
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
-          presets: ['@babel/preset-env'],
+          presets: ['es2015'],
         },
       }
     ]
