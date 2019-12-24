@@ -5,7 +5,13 @@
     "tasks": [
         {
             "type": "npm",
-            "script": "debug",
+            "script": "develop",
+            "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "build",
+            "group": "build",
             "problemMatcher": []
         }
     ]
