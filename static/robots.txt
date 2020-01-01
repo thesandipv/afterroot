@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: */tags/
-Disallow: */categories/
+Disallow: /image
 
-sitemap: https://afterroot.co/sitemap.xml
+Sitemap: https://afterroot.co/sitemap.xml
