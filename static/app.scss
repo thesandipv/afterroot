@@ -45,7 +45,7 @@ html {
 .eic-section {
   align-items: center;
   background-attachment: fixed;
-  background-image: url("./image/eic_backgroud.png");
+  background-image: url("/image/eic_backgroud.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,7 +62,7 @@ section {
 .section-1 {
   display: flex;
   flex-wrap: wrap;
-  background-image: url("./image/about_us_section.jpg");
+  background-image: url("/image/about_us_section.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
