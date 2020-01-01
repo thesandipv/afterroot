@@ -1,86 +1,31 @@
 {
   "name": "afterroot",
-  "description": "everything's connected",
+  "private": true,
+  "description": "everythin's connected",
   "version": "0.1.2",
-  "author": "Sandip Vaghela <sandipvaghela311@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "gatsby": "^2.18.17",
-    "gatsby-image": "^2.2.37",
-    "gatsby-plugin-catch-links": "^2.1.21",
-    "gatsby-plugin-feed": "^2.3.25",
-    "gatsby-plugin-google-analytics": "^2.1.31",
-    "gatsby-plugin-lodash": "^3.1.18",
-    "gatsby-plugin-manifest": "^2.2.34",
-    "gatsby-plugin-netlify-cms": "^4.1.33",
-    "gatsby-plugin-nprogress": "^2.1.17",
-    "gatsby-plugin-offline": "^2.2.10",
-    "gatsby-plugin-react-helmet": "^3.1.18",
-    "gatsby-plugin-sass": "^2.1.26",
-    "gatsby-plugin-sharp": "^2.3.10",
-    "gatsby-plugin-sitemap": "^2.2.24",
-    "gatsby-plugin-twitter": "^2.1.17",
-    "gatsby-remark-autolink-headers": "^2.1.21",
-    "gatsby-remark-copy-linked-files": "^2.1.33",
-    "gatsby-remark-images": "^3.1.39",
-    "gatsby-remark-prismjs": "^3.3.28",
-    "gatsby-remark-relative-images": "^0.2.3",
-    "gatsby-remark-responsive-iframe": "^2.2.30",
-    "gatsby-source-filesystem": "^2.1.43",
-    "gatsby-transformer-remark": "^2.6.45",
-    "gatsby-transformer-sharp": "^2.3.9",
-    "lodash": "^4.17.15",
-    "moment": "^2.24.0",
-    "netlify-cms-app": "^2.10.1",
-    "node-sass": "^4.13.0",
-    "prismjs": "^1.17.1",
+    "gatsby": "^2.18.12",
     "react": "^16.12.0",
-    "react-disqus-comments": "^1.4.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-md": "^1.14.0",
-    "react-share": "^2.4.0",
-    "react-twitter-widgets": "^1.7.1",
-    "url-join": "^4.0.1"
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "cli-glob": "^0.1.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.17.0",
-    "gh-pages": "^2.1.1",
-    "prettier": "^1.19.1",
-    "remark-cli": "^6.0.1",
-    "remark-preset-lint-recommended": "^3.0.3",
-    "stylefmt": "^6.0.3",
-    "stylelint": "^10.1.0",
-    "stylelint-config-standard": "^18.3.0",
-    "write-good": "^1.0.2"
+    "prettier": "^1.19.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "develop": "gatsby develop",
-    "dev": "npm run develop",
-    "serve": "gatsby serve",
-    "build": "gatsby build",
-    "build:pp": "gatsby build --prefix-paths",
-    "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
-    "clean": "rm -rf public && rm -rf .cache",
-    "lint:js": "eslint --ext .js,.jsx .",
-    "lint:md": "remark content/posts/",
-    "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandipv22/afterroot"
   },
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
+  "bugs": {
+    "url": "https://github.com/sandipv22/afterrot/issues"
   }
 }
