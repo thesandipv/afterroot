@@ -1,8 +1,8 @@
 import React from "react"
+import Container from "../components/Container/container"
 
 export default () => (
-  <div style={{ color: `teal` }}>
+  <Container>
     <h1>About Gatsby</h1>
-    <p>Such wow. Very React.</p>
-  </div>
+  </Container>
 )

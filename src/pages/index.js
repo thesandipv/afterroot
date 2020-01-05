@@ -1,13 +1,12 @@
 import React from "react"
-import Header from "../components/header"
+import Header from "../components/Header/header"
 import config from "../../data/SiteConfig"
 import { Link } from "gatsby"
 
 export default () => (
   <div style={{ color: `purple` }}>
-    <Header headerText={config.siteTitle} />
+    <Header title={config.siteTitle} />
     <p>What a world.</p>
-    <img src="https://source.unsplash.com/random/400x200" alt="" />
     <Link to="/contact/">Contact</Link>
   </div>
 )
