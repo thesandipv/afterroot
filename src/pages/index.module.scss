@@ -1,0 +1,60 @@
+@import "../styles/global.scss";
+
+.main {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.eicSection {
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url("../../static/image/eic_backgroud.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+}
+
+.titleBg {
+  color: #000000;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  font-family: "Roboto", "sans-serif";
+}
+
+@media (max-width: 1200px) {
+  .titleBg {
+    font-size: calc(1.575rem + 3.9vw);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+
+.textOverline {
+  letter-spacing: 0.16667em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
