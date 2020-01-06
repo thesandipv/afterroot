@@ -1,3 +1,18 @@
+@import "../styles/theme";
 body {
   margin: auto;
+  background: $mdc-theme-background;
+}
+
+body,
+html,
+main {
+  height: 100%;
+  width: 100%;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+  width: 100%;
 }
