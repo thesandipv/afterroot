@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-.titleBg {
+@mixin titleBg {
   color: #000000;
   text-align: center;
   font-size: 4.5rem;
@@ -28,8 +28,13 @@
   font-family: "Roboto", "sans-serif";
 }
 
+.titleBg {
+  @include titleBg();
+}
+
 @media (max-width: 1200px) {
   .titleBg {
+    @include titleBg();
     font-size: calc(1.575rem + 3.9vw);
   }
 }
