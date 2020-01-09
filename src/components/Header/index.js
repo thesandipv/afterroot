@@ -10,7 +10,7 @@ import {
 
 export default props => (
   <>
-    <TopAppBar>
+    <TopAppBar fixed>
       <TopAppBarRow>
         <TopAppBarSection>
           <TopAppBarTitle>{props.title}</TopAppBarTitle>
