@@ -1,4 +1,8 @@
 @import "../styles/global.scss";
+@import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/ripple/mdc-ripple";
 
 .main {
   display: block;
@@ -6,7 +10,7 @@
   width: 100%;
 }
 
-.eicSection {
+.eic-section {
   align-items: center;
   background-attachment: fixed;
   background-image: url("../../static/image/eic_backgroud.png");
@@ -15,8 +19,24 @@
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
+}
+
+.section-1 {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("../../static/image/about_us_section.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0px;
+}
+
+.section-2 {
+  background-color: #e0dcdc05;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @mixin titleBg {
@@ -25,15 +45,14 @@
   font-size: 4.5rem;
   font-weight: 300;
   line-height: 1.2;
-  font-family: "Roboto", "sans-serif";
 }
 
-.titleBg {
+.title-bg {
   @include titleBg();
 }
 
 @media (max-width: 1200px) {
-  .titleBg {
+  .title-bg {
     @include titleBg();
     font-size: calc(1.575rem + 3.9vw);
   }
@@ -51,15 +70,20 @@
   }
 }
 
-.fadeInLeft {
+.fade-in-left {
   animation-name: fadeInLeft;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-delay: 0.5s;
 }
 
-.textOverline {
+.text-overline {
   letter-spacing: 0.16667em;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.card-with-text {
+  padding: 0px;
+  text-align: center;
 }
