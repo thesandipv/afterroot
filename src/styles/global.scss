@@ -8,14 +8,11 @@ body {
 }
 
 body,
-html,
-main {
+html {
   height: 100%;
   width: 100%;
 }
 
-#___gatsby,
-#gatsby-focus-wrapper {
-  height: 100%;
-  width: 100%;
+section {
+  padding: 16px 0px 16px;
 }

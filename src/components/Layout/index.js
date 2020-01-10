@@ -1,10 +1,11 @@
 import React from "react"
 import Header from "../Header"
-import config from "../../../data/SiteConfig"
+import Footer from "../Footer"
 
-export default ({ children }) => (
+export default ({ children, title }) => (
   <>
-    <Header title={config.siteTitle}></Header>
+    <Header title={title}></Header>
     <div>{children}</div>
+    <Footer />
   </>
 )
