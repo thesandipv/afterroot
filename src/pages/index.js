@@ -1,15 +1,15 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Helmet from "react-helmet"
 import "./index.scss"
 import { Typography } from "@rmwc/typography"
 import { Button } from "@rmwc/button"
 import { Grid, GridCell } from "@rmwc/grid"
+import SEO from "../components/SEO"
 
 export default () => (
   <>
-    <Helmet title="AfterROOT" />
-    <Layout>
+    <SEO title="AfterROOT" />
+    <Layout title="AfterROOT">
       <main className="main">
         <section className="eic-section">
           <h1 className="title-bg text-overline fade-in-left">
@@ -21,7 +21,7 @@ export default () => (
         </section>
         <section className="section-1">
           <div
-            className="align-self-center, text-white, text-center"
+            className="align-self-center color-white text-center"
             style={{
               backgroundColor: "#00000083",
               width: "100%",
@@ -58,7 +58,7 @@ export default () => (
                     Pointer Replacer
                   </Typography>
                   <p>
-                    <Button href="#" label="Learn More" />
+                    <Button href="#" label="Learn More" unelevated />
                   </p>
                 </div>
               </GridCell>
@@ -74,7 +74,7 @@ export default () => (
                     ShowTouchesEnabler
                   </Typography>
                   <p>
-                    <Button href="#" label="Learn More" />
+                    <Button href="#" label="Learn More" unelevated />
                   </p>
                 </div>
               </GridCell>

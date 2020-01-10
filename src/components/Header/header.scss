@@ -1,2 +1,7 @@
 @import "../../styles/theme";
 @import "@material/top-app-bar/mdc-top-app-bar";
+
+.header-logo {
+  width: 48px;
+  fill: currentColor;
+}

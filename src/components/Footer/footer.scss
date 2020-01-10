@@ -1,0 +1,58 @@
+@import "../../styles/global.scss";
+
+.my-footer {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  width: 100%;
+}
+
+.footer-links {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  width: 100%;
+  opacity: 80%;
+}
+
+.footer-item {
+  color: #000000;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.social-list {
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-list li {
+  margin: 0 0.5rem;
+}
+
+.social-list a {
+  color: #6f7476;
+  transition: color 0.2s ease-in-out;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
+}
+
+.icon--padding {
+  padding: 4px;
+}
