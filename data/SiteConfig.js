@@ -1,4 +1,4 @@
-import { version as _version } from "../package.json"
+const _version = "0.1.3"
 const config = {
   siteTitle: "AfterROOT - Everything's Connected", // Site title.
   siteTitleShort: "AfterROOT", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
@@ -8,7 +8,6 @@ const config = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   siteDescription: "Everything's Connected.", // Website description used for RSS feeds/meta description tag.
-  siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "848840965544933", // FB Application ID for using app insights
   siteGATrackingID: "G-XXG24NGLY6", // Tracking code ID for google analytics.
   disqusShortname: "https-afterroot-co", // Disqus shortname.
@@ -46,21 +45,7 @@ const config = {
 }
 
 // Validate
-
-// Make sure pathPrefix is empty if not needed
-if (config.pathPrefix === "/") {
-  config.pathPrefix = ""
-} else {
-  // Make sure pathPrefix only contains the first forward slash
-  config.pathPrefix = `/${config.pathPrefix.replace(/^\/|\/$/g, "")}`
-}
-
 // Make sure siteUrl doesn't have an ending forward slash
 if (config.siteUrl.substr(-1) === "/")
   config.siteUrl = config.siteUrl.slice(0, -1)
-
-// Make sure siteRss has a starting forward slash
-if (config.siteRss && config.siteRss[0] !== "/")
-  config.siteRss = `/${config.siteRss}`
-
-export default config
+module.exports = config
