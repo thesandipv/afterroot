@@ -33,12 +33,6 @@
   padding: 0px;
 }
 
-.section-2 {
-  background-color: #e0dcdc05;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 @mixin titleBg {
   color: #000000;
   text-align: center;
@@ -81,11 +75,6 @@
   letter-spacing: 0.16667em;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.card-with-text {
-  padding: 0px;
-  text-align: center;
 }
 
 .color-white {
