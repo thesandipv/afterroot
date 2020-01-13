@@ -8,7 +8,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className="dropdown-divider" />
-        <div className="footer-links">
+        <div className="footer-links mdc-typography--overline">
           <Link className="footer-item" to="/about">
             About
           </Link>
@@ -27,7 +27,7 @@ class Footer extends Component {
             >
               <img
                 className="icon icon--social"
-                src="/assets/ig_logo.png"
+                src="./assets/ig_logo.png"
                 alt=""
               />
             </a>
@@ -42,7 +42,7 @@ class Footer extends Component {
             >
               <img
                 className="icon icon--social icon--padding"
-                src="/assets/youtube_logo.png"
+                src="./assets/youtube_logo.png"
                 alt=""
               />
             </a>
@@ -60,7 +60,7 @@ class Footer extends Component {
             >
               <img
                 className="icon icon--social icon--padding"
-                src="assets/fb_logo.png"
+                src="./assets/fb_logo.png"
                 alt=""
               />
             </a>
@@ -75,7 +75,7 @@ class Footer extends Component {
             >
               <img
                 className="icon icon--social"
-                src="/assets/twitter_logo.svg"
+                src="./assets/twitter_logo.svg"
                 alt=""
               />
             </a>
@@ -87,7 +87,7 @@ class Footer extends Component {
             style={{ fontSize: "0.7em" }}
             id="_version"
           >
-            {config.copyright} • {config.version}
+            {config.copyright} • v{config.version}
           </span>
         </div>
       </footer>
