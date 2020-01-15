@@ -6,7 +6,7 @@ import SEO from "../components/SEO"
 export default () => (
   <>
     <SEO title="Privacy Policy" description="view AfterROOT's Privacy Policy" />
-    <Layout title="Privacy Policy">
+    <Layout title="Privacy Policy" navIcon="arrow_back">
       <main className="main">
         <div className="container mt-3">
           <p>
