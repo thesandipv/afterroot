@@ -6,11 +6,12 @@ import "./appsection.scss"
 
 class AppSection extends Component {
   render() {
+    const { title } = this.props
     return (
       <section className="section-2">
         <div className="container text-center">
           <Typography use="headline4" className="text-overline" tag="h5">
-            Our Apps
+            {title != null ? title : null}
           </Typography>
           <Grid>
             <GridCell span="6">
