@@ -39,7 +39,7 @@ export default () => (
             </div>
           </div>
         </section>
-        <AppSection />
+        <AppSection title="Our Apps" />
       </main>
     </Layout>
   </>
