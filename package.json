@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "firebase": "^7.7.0",
+    "firebaseui": "^4.4.0",
     "gatsby": "^2.18.12",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-sass": "^2.1.26",
