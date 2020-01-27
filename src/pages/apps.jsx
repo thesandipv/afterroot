@@ -5,7 +5,7 @@ import AppSection from "../components/AppSection"
 export default () => (
   <>
     <Layout title="Apps" navIcon="arrow_back">
-      <AppSection title="Apps" />
+      <AppSection />
     </Layout>
   </>
 )
