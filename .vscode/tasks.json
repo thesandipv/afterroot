@@ -1,45 +1,47 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558 
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build",
-            "type": "npm",
-            "script": "build",
-            "path": "/",
-            "problemMatcher": [
-                "$eslint-compact",
-                "$node-sass"
-            ],
-            "options": {
-                "statusbar": {
-                    "hide": true
-                },
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "develop",
-            "type": "npm",
-            "script": "develop",
-            "path": "/",
-            "problemMatcher": [
-                "$eslint-compact",
-                "$node-sass"
-            ],
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "options": {
-                "statusbar": {
-                    "hide": false
-                },
-            },
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "npm",
+      "script": "build",
+      "path": "/",
+      "problemMatcher": ["$eslint-compact", "$node-sass"],
+      "options": {
+        "statusbar": {
+          "hide": true
         }
-    ]
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "develop",
+      "type": "npm",
+      "script": "develop",
+      "path": "/",
+      "problemMatcher": ["$eslint-compact", "$node-sass"],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "options": {
+        "statusbar": {
+          "hide": false
+        }
+      }
+    },
+    {
+      "label": "deploy",
+      "type": "shell",
+      "command": "firebase deploy --only hosting",
+      "problemMatcher": [],
+      "dependsOn": ["build"],
+      "dependsOrder": "sequence"
+    }
+  ]
 }
