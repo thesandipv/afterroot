@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./footer.scss"
 import { Link } from "gatsby"
 import config from "../../../data/SiteConfig"
+import { StaticQuery, graphql } from "gatsby"
 
 class Footer extends Component {
   render() {
@@ -82,13 +83,25 @@ class Footer extends Component {
           </li>
         </ul>
         <div className="footer-links justify-content-center">
-          <span
-            className="mdc-typography"
-            style={{ fontSize: "0.7em" }}
-            id="_version"
-          >
-            {config.copyright} • v{config.version}
-          </span>
+          <StaticQuery
+            query={graphql`
+              query {
+                currentBuildDate {
+                  currentDate
+                }
+              }
+            `}
+            render={data => (
+              <span
+                className="mdc-typography"
+                style={{ fontSize: "0.7em" }}
+                id="_version"
+              >
+                {config.copyright} • v{config.version} • Built on
+                {data.currentBuildDate.currentDate}
+              </span>
+            )}
+          />
         </div>
       </footer>
     )
