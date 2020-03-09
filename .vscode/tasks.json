@@ -42,6 +42,19 @@
       "problemMatcher": [],
       "dependsOn": ["build"],
       "dependsOrder": "sequence"
+    },
+    {
+      "label": "serve",
+      "type": "shell",
+      "command": "firebase serve --only hosting"
+    },
+    {
+      "label": "Build&Serve",
+      "type": "shell",
+      "command": "firebase serve --only hosting",
+      "problemMatcher": [],
+      "dependsOn": ["build"],
+      "dependsOrder": "sequence"
     }
   ]
 }
