@@ -1,8 +1,15 @@
 import React, { Component } from "react"
 import "./footer.scss"
-import { Link } from "gatsby"
 import config from "../../../data/SiteConfig"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faGithub,
+  faTwitter,
+  faFacebook,
+  faYoutube,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
 
 class Footer extends Component {
   render() {
@@ -10,12 +17,16 @@ class Footer extends Component {
       <footer>
         <div className="dropdown-divider" />
         <div className="footer-links mdc-typography--overline">
-          <Link className="footer-item" to="/about">
-            About
-          </Link>
-          <Link className="footer-item" to="/privacy-policy">
-            Privacy Policy
-          </Link>
+          {window.location.pathname != "/about" ? (
+            <Link className="footer-item" to="/about">
+              About
+            </Link>
+          ) : null}
+          {window.location.pathname != "/privacy-policy" ? (
+            <Link className="footer-item" to="/privacy-policy">
+              Privacy Policy
+            </Link>
+          ) : null}
         </div>
         <ul className="social-list">
           <li>
@@ -26,11 +37,7 @@ class Footer extends Component {
               target="_blank"
               title="Find AfterROOT on Instagram"
             >
-              <img
-                className="icon icon--social"
-                src="./assets/ig_logo.png"
-                alt=""
-              />
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
           <li>
@@ -41,11 +48,7 @@ class Footer extends Component {
               target="_blank"
               title="Find AfterROOT on YouTube"
             >
-              <img
-                className="icon icon--social icon--padding"
-                src="./assets/youtube_logo.png"
-                alt=""
-              />
+              <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
           <li>
@@ -59,11 +62,7 @@ class Footer extends Component {
               data-g-action="clicked"
               data-g-label="facebook"
             >
-              <img
-                className="icon icon--social icon--padding"
-                src="./assets/fb_logo.png"
-                alt=""
-              />
+              <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
           <li>
@@ -74,11 +73,18 @@ class Footer extends Component {
               target="_blank"
               title="Find AfterROOT on Twitter"
             >
-              <img
-                className="icon icon--social"
-                src="./assets/twitter_logo.svg"
-                alt=""
-              />
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/sandipv22"
+              rel="noopener noreferrer"
+              aria-label="Projects on GitHub"
+              target="_blank"
+              title="Projects on GitHub"
+            >
+              <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
         </ul>
@@ -97,7 +103,7 @@ class Footer extends Component {
                 style={{ fontSize: "0.7em" }}
                 id="_version"
               >
-                {config.copyright} • v{config.version} • Built on
+                {config.copyright} • v{config.version} • Built on{" "}
                 {data.currentBuildDate.currentDate}
               </span>
             )}
