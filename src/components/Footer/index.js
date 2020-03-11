@@ -10,12 +10,10 @@ import {
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
+import window from "global"
 
 class Footer extends Component {
   render() {
-    if (!process.env.BROWSER) {
-      global.window = {}
-    }
     return (
       <footer>
         <div className="dropdown-divider" />
