@@ -46,7 +46,7 @@ class Footer extends Component {
         <ul className="social-list">
           <li>
             <a
-              href="https://www.instagram.com/afterroot/"
+              href={config.links.igUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on Instagram"
               target="_blank"
@@ -57,7 +57,7 @@ class Footer extends Component {
           </li>
           <li>
             <a
-              href="https://www.youtube.com/channel/UCBoD9tMU--hsqlX9--Mrypw"
+              href={config.links.ytUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on YouTube"
               target="_blank"
@@ -68,7 +68,7 @@ class Footer extends Component {
           </li>
           <li>
             <a
-              href="https://www.facebook.com/afterroot"
+              href={config.links.fbUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on Facebook"
               target="_blank"
@@ -82,7 +82,7 @@ class Footer extends Component {
           </li>
           <li>
             <a
-              href="https://twitter.com/afterroot"
+              href={config.links.twitterUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on Twitter"
               target="_blank"
@@ -93,7 +93,7 @@ class Footer extends Component {
           </li>
           <li>
             <a
-              href="https://github.com/sandipv22"
+              href={config.links.githubUrl}
               rel="noopener noreferrer"
               aria-label="Projects on GitHub"
               target="_blank"
