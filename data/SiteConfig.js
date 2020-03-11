@@ -22,24 +22,14 @@ const config = {
     "https://secure.gravatar.com/avatar/3dfb0a8b6735f2cdcf21e2956eb69e36", // User avatar to display in the author segment.
   userDescription:
     "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
-  // Links to social profiles/projects you want to display in the author segment/navigation bar.
-  userLinks: [
-    {
-      label: "GitHub",
-      url: "https://github.com/sandipv22",
-      iconClassName: "fa fa-github",
-    },
-    {
-      label: "Twitter",
-      url: "https://twitter.com/thesandipv",
-      iconClassName: "fa fa-twitter",
-    },
-    {
-      label: "Email",
-      url: "mailto:sandipvaghela311@gmail.com",
-      iconClassName: "fa fa-envelope",
-    },
-  ],
+  links: {
+    githubUrl: "https://github.com/sandipv22",
+    twitterUrl: "https://twitter.com/thesandipv",
+    mailUrl: "mailto:sandipvaghela311@gmail.com",
+    igUrl: "https://www.instagram.com/afterroot/",
+    ytUrl: "https://www.youtube.com/channel/UCBoD9tMU--hsqlX9--Mrypw",
+    fbUrl: "https://www.facebook.com/afterroot",
+  },
   copyright: "Copyright © 2020 AfterROOT", // Copyright string for the footer of the website and RSS feed.
   version: _version,
 }
