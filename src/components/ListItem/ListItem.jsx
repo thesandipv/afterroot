@@ -1,12 +1,12 @@
 import React, { Component } from "react"
-import firebase from "../scripts/firebase"
+import firebase from "../../scripts/firebase"
 import {
   ListItem,
   ListItemText,
   ListItemPrimaryText,
   ListItemSecondaryText,
 } from "@rmwc/list"
-import "./ListItem/listitem.scss"
+import "./listitem.scss"
 
 class FireListItem extends Component {
   constructor(props) {
