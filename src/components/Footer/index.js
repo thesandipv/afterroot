@@ -10,25 +10,39 @@ import {
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
-import window from "global"
 
 class Footer extends Component {
-  render() {
-    return (
-      <footer>
-        <div className="dropdown-divider" />
+  constructor(props) {
+    super(props)
+    this.state = {
+      links: null,
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      links: (
         <div className="footer-links mdc-typography--overline">
-          {window.location.pathname != "/about" ? (
+          {window.location.pathname !== "/about" ? (
             <Link className="footer-item" to="/about">
               About
             </Link>
           ) : null}
-          {window.location.pathname != "/privacy-policy" ? (
+          {window.location.pathname !== "/privacy-policy" ? (
             <Link className="footer-item" to="/privacy-policy">
               Privacy Policy
             </Link>
           ) : null}
         </div>
+      ),
+    })
+  }
+
+  render() {
+    return (
+      <footer>
+        <div className="dropdown-divider" />
+        {this.state.links}
         <ul className="social-list">
           <li>
             <a
