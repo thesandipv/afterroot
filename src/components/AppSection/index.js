@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Typography } from "@rmwc/typography"
 import { List } from "@rmwc/list"
 import "./appsection.scss"
-import FireListItem from "../ListItem"
+import FireListItem from "../ListItem/ListItem"
 
 class AppSection extends Component {
   render() {
