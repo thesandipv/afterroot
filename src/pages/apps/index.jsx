@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../components/Layout"
-import AppSection from "../components/AppSection"
+import Layout from "../../components/Layout"
+import AppSection from "../../components/AppSection"
 
 export default () => (
   <>
