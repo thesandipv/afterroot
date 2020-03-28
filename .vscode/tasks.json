@@ -7,13 +7,7 @@
       "label": "build",
       "type": "npm",
       "script": "build",
-      "path": "/",
       "problemMatcher": ["$eslint-compact", "$node-sass"],
-      "options": {
-        "statusbar": {
-          "hide": true
-        }
-      },
       "group": {
         "kind": "build",
         "isDefault": true
@@ -23,20 +17,14 @@
       "label": "develop",
       "type": "npm",
       "script": "develop",
-      "path": "/",
       "problemMatcher": ["$eslint-compact", "$node-sass"],
       "group": {
         "kind": "test",
         "isDefault": true
-      },
-      "options": {
-        "statusbar": {
-          "hide": false
-        }
       }
     },
     {
-      "label": "deploy",
+      "label": "fb:deploy",
       "type": "shell",
       "command": "firebase deploy --only hosting",
       "problemMatcher": [],
@@ -44,12 +32,12 @@
       "dependsOrder": "sequence"
     },
     {
-      "label": "serve",
+      "label": "fb:serve",
       "type": "shell",
       "command": "firebase serve --only hosting"
     },
     {
-      "label": "Build&Serve",
+      "label": "fb:build&Serve",
       "type": "shell",
       "command": "firebase serve --only hosting",
       "problemMatcher": [],
