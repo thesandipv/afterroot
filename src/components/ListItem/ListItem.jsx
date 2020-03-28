@@ -7,6 +7,7 @@ import {
   ListItemSecondaryText,
 } from "@rmwc/list"
 import "./listitem.scss"
+import { Link } from "gatsby"
 
 class FireListItem extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class FireListItem extends Component {
         newState.push({
           title: apps[app].title,
           description: apps[app].description,
+          path: apps[app].path,
         })
       }
       this.setState({
@@ -38,12 +40,16 @@ class FireListItem extends Component {
       <>
         {this.state.apps.map(app => {
           return (
-            <ListItem key={app.title}>
-              <ListItemText>
-                <ListItemPrimaryText>{app.title}</ListItemPrimaryText>
-                <ListItemSecondaryText>{app.description}</ListItemSecondaryText>
-              </ListItemText>
-            </ListItem>
+            <Link to={app.path} style={{ textDecoration: "none" }}>
+              <ListItem key={app.path}>
+                <ListItemText>
+                  <ListItemPrimaryText>{app.title}</ListItemPrimaryText>
+                  <ListItemSecondaryText>
+                    {app.description}
+                  </ListItemSecondaryText>
+                </ListItemText>
+              </ListItem>
+            </Link>
           )
         })}
       </>
