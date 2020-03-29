@@ -1,0 +1,2 @@
+User-agent: *
+sitemap: https://afterroot.web.app/sitemap.xml
