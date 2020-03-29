@@ -34,7 +34,7 @@ class Header extends Component {
                 {icon}
                 <img
                   className="header-logo mdc-top-app-bar__navigation-icon"
-                  src="/image/logo_64.png"
+                  src="/assets/logo_64.png"
                   alt="afterroot"
                 />
               </Link>
