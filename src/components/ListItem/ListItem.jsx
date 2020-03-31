@@ -40,8 +40,12 @@ class FireListItem extends Component {
       <>
         {this.state.apps.map(app => {
           return (
-            <Link to={app.path} style={{ textDecoration: "none" }}>
-              <ListItem key={app.path}>
+            <Link
+              to={app.path}
+              style={{ textDecoration: "none" }}
+              key={app.path}
+            >
+              <ListItem>
                 <ListItemText>
                   <ListItemPrimaryText>{app.title}</ListItemPrimaryText>
                   <ListItemSecondaryText>
