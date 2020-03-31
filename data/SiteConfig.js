@@ -6,7 +6,6 @@ const config = {
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://afterroot.co", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
-  fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   siteDescription: "Everything's Connected.", // Website description used for RSS feeds/meta description tag.
   siteFBAppID: "848840965544933", // FB Application ID for using app insights
   siteGATrackingID: "G-XXG24NGLY6", // Tracking code ID for google analytics.
@@ -14,10 +13,6 @@ const config = {
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
-  userName: "Sandip", // Username to display in the author segment.
-  userEmail: "sandipvaghela311@gmail.com", // Email used for RSS feed's author segment
-  userTwitter: "thesandipv", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "Gujarat, India", // User location to display in the author segment.
   userAvatar:
     "https://secure.gravatar.com/avatar/3dfb0a8b6735f2cdcf21e2956eb69e36", // User avatar to display in the author segment.
   userDescription:
@@ -32,6 +27,8 @@ const config = {
   },
   copyright: "Copyright © 2020 AfterROOT", // Copyright string for the footer of the website and RSS feed.
   version: _version,
+  themeColor: "#1E88E5",
+  backgroundColor: "#e0e0e0",
 }
 
 // Validate
