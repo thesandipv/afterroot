@@ -1,11 +1,6 @@
 import React, { Component } from "react"
-import firebase from "../../scripts/firebase"
-import {
-  ListItem,
-  ListItemText,
-  ListItemPrimaryText,
-  ListItemSecondaryText,
-} from "@rmwc/list"
+import { getDatabase } from "../../scripts/firebase"
+import { List, SimpleListItem } from "@rmwc/list"
 import "./listitem.scss"
 import { Link } from "gatsby"
 
@@ -18,7 +13,7 @@ class FireListItem extends Component {
   }
 
   componentDidMount() {
-    const appsRef = firebase.database().ref(this.props.dbRef)
+    const appsRef = getDatabase().ref(this.props.dbRef)
     appsRef.on("value", snapshot => {
       let apps = snapshot.val()
       let newState = []
@@ -26,7 +21,8 @@ class FireListItem extends Component {
         newState.push({
           title: apps[app].title,
           description: apps[app].description,
-          path: apps[app].path,
+          path: `/apps/${apps[app].path}`,
+          graphic: `/logos/${apps[app].path}.png`,
         })
       }
       this.setState({
@@ -38,24 +34,19 @@ class FireListItem extends Component {
   render() {
     return (
       <>
-        {this.state.apps.map(app => {
-          return (
-            <Link
-              to={app.path}
-              style={{ textDecoration: "none" }}
-              key={app.path}
-            >
-              <ListItem>
-                <ListItemText>
-                  <ListItemPrimaryText>{app.title}</ListItemPrimaryText>
-                  <ListItemSecondaryText>
-                    {app.description}
-                  </ListItemSecondaryText>
-                </ListItemText>
-              </ListItem>
-            </Link>
-          )
-        })}
+        <List twoLine>
+          {this.state.apps.map(app => {
+            return (
+              <Link to={app.path} className="appList" key={app.path}>
+                <SimpleListItem
+                  text={app.title}
+                  secondaryText={app.description}
+                  graphic={app.graphic}
+                />
+              </Link>
+            )
+          })}
+        </List>
       </>
     )
   }

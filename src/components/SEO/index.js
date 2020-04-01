@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import { initFirebase } from "../../scripts/firebase"
 
 const SEO = ({ title, description, image, pathname, article }) => (
   <StaticQuery
@@ -14,7 +15,6 @@ const SEO = ({ title, description, image, pathname, article }) => (
           defaultDescription,
           siteUrl,
           defaultImage,
-          twitterUsername,
         },
       },
     }) => {
@@ -24,7 +24,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
         image: `${siteUrl}${image || defaultImage}`,
         url: `${siteUrl}${pathname || "/"}`,
       }
-
+      initFirebase()
       return (
         <>
           <Helmet title={seo.title} titleTemplate={titleTemplate}>
@@ -39,10 +39,6 @@ const SEO = ({ title, description, image, pathname, article }) => (
               <meta property="og:description" content={seo.description} />
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
-            <meta name="twitter:card" content="summary_large_image" />
-            {twitterUsername && (
-              <meta name="twitter:creator" content={twitterUsername} />
-            )}
             {seo.title && <meta name="twitter:title" content={seo.title} />}
             {seo.description && (
               <meta name="twitter:description" content={seo.description} />
