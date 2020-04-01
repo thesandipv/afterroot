@@ -1,1 +1,16 @@
 @import "@material/list/mdc-list";
+
+.appList {
+  text-decoration: none;
+  color: black;
+}
+
+.appList:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.material-icons {
+  height: 48px;
+  width: 48px;
+}
