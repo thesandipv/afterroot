@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from "../../components/Layout"
+import Layout from "../../../components/Layout"
 import YouTube from "react-youtube"
-import Container from "../../components/Container/container"
+import Container from "../../../components/Container/container"
 
 const options = {
   playerVars: {
