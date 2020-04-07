@@ -4,7 +4,7 @@ const config = {
   siteTitleShort: "AfterROOT", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "AfterROOT", // Alternative site title for SEO.
   siteLogo: "/logos/logo_512.png", // Logo used for SEO and manifest.
-  siteUrl: "https://afterroot.co", // Domain of your website without pathPrefix.
+  siteUrl: "https://afterroot.web.app", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   siteDescription: "Everything's Connected.", // Website description used for RSS feeds/meta description tag.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.

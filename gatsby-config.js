@@ -43,7 +43,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
-    "gatsby-plugin-sitemap",
+    "gatsby-plugin-advanced-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
