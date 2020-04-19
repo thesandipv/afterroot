@@ -2,7 +2,6 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import { initFirebase } from "../../scripts/firebase"
 
 const SEO = ({ title, description, image, pathname, article }) => (
   <StaticQuery
@@ -24,7 +23,6 @@ const SEO = ({ title, description, image, pathname, article }) => (
         image: `${siteUrl}${image || defaultImage}`,
         url: `${siteUrl}${pathname || "/"}`,
       }
-      initFirebase()
       return (
         <>
           <Helmet title={seo.title} titleTemplate={titleTemplate}>
