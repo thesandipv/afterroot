@@ -1,6 +1,7 @@
 import firebase from "firebase/app"
 import "firebase/database"
 import "firebase/analytics"
+
 export const firebaseConfig = {
   apiKey: "AIzaSyCVgZRrAD3bWNq-wMsx0DA08BbbOaTk-qg",
   authDomain: "afterroot.firebaseapp.com",
@@ -11,7 +12,8 @@ export const firebaseConfig = {
   appId: "1:910276298420:web:1fd8216cb2422070f979e1",
   measurementId: "G-LJ042LZHR5",
 }
-var app
+let app;
+
 export function initFirebase() {
   if (app == null) {
     console.log("Initializing Firebase app")
@@ -20,7 +22,9 @@ export function initFirebase() {
   console.log("Firebase app already initialized")
   return app
 }
+
 export function getDatabase() {
   return initFirebase().database()
 }
+
 export default firebase

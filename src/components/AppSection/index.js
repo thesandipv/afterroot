@@ -6,7 +6,7 @@ import FireListItem from "../ListItem/ListItem"
 
 class AppSection extends Component {
   render() {
-    var title = null
+    let title = null;
     if (this.props.title != null) {
       title = (
         <Typography
@@ -23,7 +23,7 @@ class AppSection extends Component {
         <div className="container">
           {title}
           <List twoLine>
-            <FireListItem dbRef="apps" />
+            <FireListItem dbRef="apps"/>
           </List>
         </div>
       </section>
