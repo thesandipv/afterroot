@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "src/components/Layout"
-import YouTube, {Options} from "react-youtube"
+import YouTube, { Options } from "react-youtube"
 import Container from "src/components/Container/container"
 
 const options: Options = {
