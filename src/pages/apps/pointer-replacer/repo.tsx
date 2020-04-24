@@ -1,8 +1,8 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import Layout from "src/components/Layout"
 import Container from "src/components/Container/container"
 import * as firebaseui from "firebaseui"
-import firebase, {initFirebase} from "src/scripts/firebase"
+import firebase, { initFirebase } from "src/scripts/firebase"
 import "node_modules/firebaseui/dist/firebaseui.css"
 
 class Repo extends Component {

@@ -1,8 +1,8 @@
-import React, {Component} from "react"
-import {getDatabase} from "../../scripts/firebase"
-import {List, SimpleListItem} from "@rmwc/list"
+import React, { Component } from "react"
+import { getDatabase } from "../../scripts/firebase"
+import { List, SimpleListItem } from "@rmwc/list"
 import "./listitem.scss"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 
 interface IProps {
   dbRef: string

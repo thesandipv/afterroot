@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "src/components/Layout"
 import "./index.scss"
-import {Typography} from "@rmwc/typography"
+import { Typography } from "@rmwc/typography"
 import SEO from "../components/SEO"
 import AppSection from "../components/AppSection"
 
