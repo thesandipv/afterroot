@@ -12,7 +12,7 @@ export const firebaseConfig = {
   appId: "1:910276298420:web:1fd8216cb2422070f979e1",
   measurementId: "G-LJ042LZHR5",
 }
-let app;
+let app: firebase.app.App
 
 export function initFirebase() {
   if (app == null) {

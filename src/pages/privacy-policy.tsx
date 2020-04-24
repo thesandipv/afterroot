@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { Typography } from "@rmwc/typography"
+import {Typography} from "@rmwc/typography"
 import SEO from "../components/SEO"
 
 export default () => (
