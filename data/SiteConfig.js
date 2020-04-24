@@ -11,12 +11,22 @@ const config = {
   dateFormat: "DD/MM/YYYY", // Date format for display.
   links: {
     githubUrl: "https://github.com/sandipv22",
-    twitterUrl: "https://twitter.com/thesandipv",
+    twitterUrl: "https://twitter.com/afterroot",
     mailUrl: "mailto:sandipvaghela311@gmail.com",
     igUrl: "https://www.instagram.com/afterroot/",
     ytUrl: "https://www.youtube.com/channel/UCBoD9tMU--hsqlX9--Mrypw",
     fbUrl: "https://www.facebook.com/afterroot",
   },
+  extraFooterLinks: [
+    {
+      title: "Developed with IntelliJ IDEA",
+      url: "https://www.jetbrains.com/?from=AfterROOT",
+    },
+    {
+      title: "VS Code",
+      url: "https://code.visualstudio.com",
+    },
+  ],
   copyright: "Copyright © 2020 AfterROOT", // Copyright string for the footer of the website and RSS feed.
   version: _version,
   themeColor: "#1E88E5",

@@ -40,10 +40,7 @@ module.exports = {
         color: config.themeColor,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     "gatsby-plugin-catch-links",
-    "gatsby-plugin-twitter",
     "gatsby-plugin-advanced-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
@@ -65,5 +62,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
+    "gatsby-plugin-typescript",
   ],
 }
