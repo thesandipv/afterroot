@@ -1,40 +1,33 @@
 import React, { Component } from "react"
 import "./footer.scss"
 import config from "../../../data/SiteConfig"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { graphql, Link, StaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faGithub,
-  faTwitter,
   faFacebook,
-  faYoutube,
+  faGithub,
   faInstagram,
+  faTwitter,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
 
-class Footer extends Component {
-  constructor(props) {
+interface IProps {}
+
+interface IState {
+  extraLinks: { title: string; url: string; isExternal: boolean }[]
+}
+
+class Footer extends Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props)
     this.state = {
-      links: null,
+      extraLinks: [],
     }
   }
 
   componentDidMount() {
     this.setState({
-      links: (
-        <div className="footer-links mdc-typography--overline">
-          {window.location.pathname !== "/about" ? (
-            <Link className="footer-item" to="/about">
-              About
-            </Link>
-          ) : null}
-          {window.location.pathname !== "/privacy-policy" ? (
-            <Link className="footer-item" to="/privacy-policy">
-              Privacy Policy
-            </Link>
-          ) : null}
-        </div>
-      ),
+      extraLinks: config.footerLinks,
     })
   }
 
@@ -42,7 +35,29 @@ class Footer extends Component {
     return (
       <footer>
         <div className="dropdown-divider" />
-        {this.state.links}
+        <div className="footer-links mdc-typography--overline">
+          {this.state.extraLinks.map(link => {
+            if (link.isExternal) {
+              return (
+                <span key={link.title}>
+                  <a className="footer-item" href={link.url} target="_blank">
+                    {link.title}
+                  </a>
+                  |
+                </span>
+              )
+            } else {
+              return (
+                <span key={link.title}>
+                  <Link className="footer-item" to={link.url}>
+                    {link.title}
+                  </Link>
+                  |
+                </span>
+              )
+            }
+          })}
+        </div>
         <ul className="social-list">
           <li>
             <a
@@ -73,9 +88,6 @@ class Footer extends Component {
               aria-label="Find AfterROOT on Facebook"
               target="_blank"
               title="Find AfterROOT on Facebook"
-              data-g-event="site-footer-social"
-              data-g-action="clicked"
-              data-g-label="facebook"
             >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
@@ -119,7 +131,9 @@ class Footer extends Component {
                 id="_version"
               >
                 {config.copyright} • v{config.version} • Built on{" "}
-                {data.currentBuildDate.currentDate}
+                {data.currentBuildDate.currentDate} • Developed with{" "}
+                {<a href={config.links.jetbrains}>IntelliJ IDEA</a>} and{" "}
+                {<a href={config.links.vsCode}>VS Code</a>}
               </span>
             )}
           />

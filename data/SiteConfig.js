@@ -16,15 +16,19 @@ const config = {
     igUrl: "https://www.instagram.com/afterroot/",
     ytUrl: "https://www.youtube.com/channel/UCBoD9tMU--hsqlX9--Mrypw",
     fbUrl: "https://www.facebook.com/afterroot",
+    jetbrains: "https://www.jetbrains.com/?from=AfterROOT",
+    vsCode: "https://code.visualstudio.com",
   },
-  extraFooterLinks: [
+  footerLinks: [
     {
-      title: "Developed with IntelliJ IDEA",
-      url: "https://www.jetbrains.com/?from=AfterROOT",
+      title: "About",
+      url: "/about",
+      isExternal: false,
     },
     {
-      title: "VS Code",
-      url: "https://code.visualstudio.com",
+      title: "Privacy Policy",
+      url: "/privacy-policy",
+      isExternal: false,
     },
   ],
   copyright: "Copyright © 2020 AfterROOT", // Copyright string for the footer of the website and RSS feed.
