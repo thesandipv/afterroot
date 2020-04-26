@@ -1,2 +1,6 @@
-$mdc-typography-font-family: unquote("Roboto, sans-serif");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:wght@300;400;500");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+$mdc-typography-font-family: unquote("Ubuntu, sans-serif");
 $font-family-base: $mdc-typography-font-family; //Bootstrap Font var

@@ -1,6 +1,8 @@
 @import "../../styles/theme";
-@import "@material/top-app-bar/mdc-top-app-bar";
-@import "@material/icon-button/mdc-icon-button";
+@import "../../styles/fonts";
+@import "~@material/top-app-bar/mdc-top-app-bar";
+@import "~@material/icon-button/mdc-icon-button";
+
 .header-logo {
   width: 48px;
   fill: currentColor;
@@ -8,6 +10,7 @@
 
 .mdc-top-app-bar__title {
   font-weight: 400;
+  font-family: $mdc-typography-font-family;
 }
 
 .mdc-top-app-bar__navigation-icon {
