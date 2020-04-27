@@ -1,8 +1,8 @@
 @import "../styles/global.scss";
-@import "@material/button/mdc-button";
-@import "@material/card/mdc-card";
-@import "@material/layout-grid/mdc-layout-grid";
-@import "@material/ripple/mdc-ripple";
+@import "~@material/button/mdc-button";
+@import "~@material/card/mdc-card";
+@import "~@material/layout-grid/mdc-layout-grid";
+@import "~@material/ripple/mdc-ripple";
 
 .main {
   display: block;
@@ -30,11 +30,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding: 0px;
+  padding: 0;
 }
 
 @mixin titleBg {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-size: 4.5rem;
   font-weight: 300;

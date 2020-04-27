@@ -1,15 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-$mdc-theme-primary: #ffffff;
+$mdc-theme-primary: #fff;
 $mdc-theme-secondary: #ff5252;
 
 $mdc-theme-background: #fff;
-$mdc-theme-surface: #ffffff;
-$mdc-theme-background: #ffffff;
+$mdc-theme-surface: #fff;
 $mdc-theme-error: #b00020;
 
-$mdc-theme-on-primary: #000000;
-$mdc-theme-on-secondary: #ffffff;
-$mdc-theme-on-error: #ffffff;
-$mdc-theme-on-surface: #000000;
+$mdc-theme-on-primary: #000;
+$mdc-theme-on-secondary: #fff;
+$mdc-theme-on-error: #fff;
+$mdc-theme-on-surface: #000;
