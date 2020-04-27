@@ -10,8 +10,8 @@ module.exports = {
   siteMetadata: {
     title: config.siteTitle,
     url: config.siteUrl,
+    siteUrl: config.siteUrl,
     description: config.siteDescription,
-    twitterUsername: config.userTwitter,
   },
 
   plugins: [
@@ -34,5 +34,34 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: "gatsby-plugin-nprogress",
+      options: {
+        color: config.themeColor,
+      },
+    },
+    "gatsby-plugin-catch-links",
+    "gatsby-plugin-advanced-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        description: config.siteDescription,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: "minimal-ui",
+        icons: [
+          {
+            src: "/logos/logo_512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
+      },
+    },
+    "gatsby-plugin-offline",
+    "gatsby-plugin-typescript",
   ],
 }
