@@ -5,13 +5,11 @@ import SEO from "../components/SEO"
 
 export default () => (
   <>
-    <SEO title="AfterROOT" />
-    <Layout title="AfterROOT">
+    <SEO title="404 - Not Found - AfterROOT" />
+    <Layout headerTitle="AfterROOT" title="404 - Not Found - AfterROOT">
       <main className="main">
         <section className="eic-section">
-          <h1 className="title-bg text-overline fade-in-left">
-            Error - 404 - Not Found
-          </h1>
+          <h1 className="title-bg text-overline">404 - Not Found</h1>
           <br />
         </section>
       </main>

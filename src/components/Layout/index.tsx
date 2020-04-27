@@ -7,13 +7,15 @@ interface Props {
   children?: any
   title: string
   navIcon?: any
+  headerTitle?: string
 }
 
-const Layout = ({ children, title, navIcon }: Props) => {
+const Layout = ({ children, title, navIcon, headerTitle }: Props) => {
+  if (headerTitle == null) headerTitle = title
   return (
     <>
       <SEO title={title} />
-      <Header title={title} navIcon={navIcon} />
+      <Header title={headerTitle} navIcon={navIcon} />
       <div>{children}</div>
       <Footer />
     </>
