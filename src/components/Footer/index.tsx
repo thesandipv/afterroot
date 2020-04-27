@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import "./footer.scss"
 import config from "../../../data/SiteConfig"
-import { graphql, Link, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
@@ -37,25 +37,24 @@ class Footer extends Component<IProps, IState> {
         <div className="dropdown-divider" />
         <div className="footer-links mdc-typography--overline">
           {this.state.extraLinks.map(link => {
-            if (link.isExternal) {
-              return (
-                <span key={link.title}>
-                  <a className="footer-item" href={link.url} target="_blank">
-                    {link.title}
-                  </a>
-                  |
-                </span>
-              )
-            } else {
-              return (
-                <span key={link.title}>
-                  <Link className="footer-item" to={link.url}>
-                    {link.title}
-                  </Link>
-                  |
-                </span>
-              )
+            let separator, target
+            if (
+              this.state.extraLinks.indexOf(link) !=
+              this.state.extraLinks.length - 1
+            ) {
+              separator = "|"
             }
+            if (link.isExternal) {
+              target = "_blank"
+            }
+            return (
+              <span key={link.title}>
+                <a className="footer-item" href={link.url} target={target}>
+                  {link.title}
+                </a>
+                {separator}
+              </span>
+            )
           })}
         </div>
         <ul className="social-list">
