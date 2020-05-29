@@ -10,7 +10,7 @@ const config = {
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   links: {
-    githubUrl: "https://github.com/sandipv22",
+    githubUrl: "https://github.com/thesandipv",
     twitterUrl: "https://twitter.com/afterroot",
     mailUrl: "mailto:sandipvaghela311@gmail.com",
     igUrl: "https://www.instagram.com/afterroot/",
