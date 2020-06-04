@@ -79,5 +79,43 @@ module.exports = {
     },
     "gatsby-plugin-offline",
     "gatsby-plugin-typescript",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/static/assets/`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-relative-images",
+          },
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 672,
+            },
+          },
+          {
+            resolve: "gatsby-remark-responsive-iframe",
+          },
+          "gatsby-remark-prismjs",
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-autolink-headers",
+        ],
+      },
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
   ],
 }
