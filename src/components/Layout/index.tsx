@@ -24,18 +24,25 @@ interface Props {
   title: string
   navIcon?: any
   headerTitle?: string
+  disableFixAdjust?: boolean
 }
 
-const Layout = ({ children, title, navIcon, headerTitle }: Props) => {
-  if (headerTitle == null) headerTitle = title
-  return (
-    <>
-      <SEO title={title} />
-      <Header title={headerTitle} navIcon={navIcon} />
-      <div>{children}</div>
-      <Footer />
-    </>
-  )
+class Layout extends React.Component<Props> {
+  render() {
+    let { children, title, navIcon, headerTitle, disableFixAdjust } = this.props
+    return (
+      <>
+        <SEO title={title} />
+        <Header
+          title={headerTitle ? headerTitle : title}
+          navIcon={navIcon}
+          disableFixAdjust={disableFixAdjust}
+        />
+        <div>{children}</div>
+        <Footer />
+      </>
+    )
+  }
 }
 
 export default Layout
