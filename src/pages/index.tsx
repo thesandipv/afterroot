@@ -50,7 +50,7 @@ export default class extends React.Component<IProps, IState> {
                 }
                 alt="Unsplash Image"
               />
-              <h1 className="title-bg text-overline fade-in-left">
+              <h1 className="title-bg text-overline fade-in-left color-white">
                 Everything's
                 <br />
                 connected
