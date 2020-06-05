@@ -20,15 +20,36 @@ import "./index.scss"
 import { Typography } from "@rmwc/typography"
 import SEO from "../components/SEO"
 import AppSection from "../components/AppSection"
+import { Unsplash } from "../types"
 
-export default class extends React.Component {
+interface IProps {}
+
+interface IState {
+  unsplashResponse?: Unsplash
+}
+
+export default class extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props)
+    this.state = { unsplashResponse: undefined }
+  }
+
   public render() {
     return (
       <>
         <SEO title="AfterROOT" />
-        <Layout title="AfterROOT" navIcon={null}>
+        <Layout title="AfterROOT" navIcon={null} disableFixAdjust={true}>
           <main className="main">
             <section className="eic-section">
+              <img
+                className="unsplash-image"
+                src={
+                  // this.state.unsplashResponse
+                  //   ? this.state.unsplashResponse.urls.regular
+                  "/assets/background.jpg"
+                }
+                alt="Unsplash Image"
+              />
               <h1 className="title-bg text-overline fade-in-left">
                 Everything's
                 <br />
@@ -66,5 +87,49 @@ export default class extends React.Component {
         </Layout>
       </>
     )
+  }
+
+  async componentDidMount() {
+    this.setState({
+      // unsplashResponse: await this.getRandomPhoto(),
+    })
+  }
+
+  private getRandomPhoto(): Promise<Unsplash> {
+    return new Promise<Unsplash>(async resolve => {
+      const searchUrl: string =
+        "https://api.unsplash.com/photos/random/" +
+        `?client_id=${process.env.UNSPLASH_KEY}`
+      try {
+        const rawResponse: Response = await fetch(searchUrl)
+
+        const response: Unsplash = JSON.parse(await rawResponse.text())
+        if (!response) {
+          resolve(undefined)
+          return
+        }
+        await this.registerDownload(response.id)
+        resolve(response.urls ? response : undefined)
+      } catch (err) {
+        resolve(undefined)
+      }
+    })
+  }
+
+  private registerDownload(photoId: string): Promise<void> {
+    return new Promise<void>(async resolve => {
+      const downloadUrl: string =
+        "https://api.unsplash.com/" +
+        `photos/${photoId}/download/?client_id=${process.env.UNSPLASH_KEY}`
+
+      try {
+        await fetch(downloadUrl)
+
+        resolve()
+      } catch (err) {
+        resolve()
+        console.log(err)
+      }
+    })
   }
 }
