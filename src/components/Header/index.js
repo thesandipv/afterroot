@@ -28,8 +28,8 @@ import { Link } from "gatsby"
 
 class Header extends Component {
   render() {
-    const { title, navIcon } = this.props
-    var icon
+    const { title, navIcon, disableFixAdjust } = this.props
+    let icon
     if (navIcon != null) {
       icon = (
         <Ripple unbounded>
@@ -58,7 +58,7 @@ class Header extends Component {
             </TopAppBarSection>
           </TopAppBarRow>
         </TopAppBar>
-        <TopAppBarFixedAdjust />
+        {disableFixAdjust ? null : <TopAppBarFixedAdjust />}
       </>
     )
   }
