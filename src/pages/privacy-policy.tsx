@@ -26,9 +26,10 @@ export default () => (
       <main className="main">
         <div className="container mt-3">
           <p>
-            Sandip Vaghela (AfterROOT) built the Allusive, ShowTouchesEnabler
-            and Expenses app as an Ad Suppored app.This SERVICE is provided by
-            Sandip Vaghela (AfterROOT) at no cost and is intended for use as is.
+            Sandip Vaghela (AfterROOT) built the Allusive(Pointer Replacer),
+            ShowTouchesEnabler, WatchDone and Expenses app as an Ad Supported
+            app.This SERVICE is provided by Sandip Vaghela (AfterROOT) at no
+            cost and is intended for use as is.
           </p>
           <p>
             This policy is used to inform you regarding my policies with the
