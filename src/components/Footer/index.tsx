@@ -142,11 +142,13 @@ class Footer extends Component<IProps, IState> {
             render={data => (
               <span
                 className="mdc-typography"
-                style={{ fontSize: "0.7em" }}
+                style={{ fontSize: "0.7em", textAlign: "center" }}
                 id="_version"
               >
                 {config.copyright} • v{config.version} • Built on{" "}
-                {data.currentBuildDate.currentDate} • Developed with{" "}
+                {data.currentBuildDate.currentDate}
+                <br />
+                Developed with{" "}
                 {<a href={config.links.jetbrains}>IntelliJ IDEA</a>} and{" "}
                 {<a href={config.links.vsCode}>VS Code</a>}
               </span>

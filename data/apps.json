@@ -1,0 +1,22 @@
+{
+  "pointer-replacer": {
+    "title": "Pointer Replacer",
+    "description": "An Xposed Module to replace touch pointer",
+    "path": "pointer-replacer"
+  },
+  "touchenabler": {
+    "title": "ShowTouchesEnabler",
+    "description": "Helper for enabling 'Show Taps' directly from Quick Settings",
+    "path": "touch-enabler"
+  },
+  "watchdone": {
+    "title": "WatchDone",
+    "description": "Watchlist Manager with 'Mark as Watched' function",
+    "path": "watchdone"
+  },
+  "mytaco": {
+    "title": "MyTACO",
+    "description": "Data Monitoring App for TACO Employee",
+    "path": "mytaco"
+  }
+}
