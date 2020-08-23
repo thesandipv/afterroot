@@ -15,10 +15,12 @@
  */
 
 import React, { Component } from "react"
-import { getDatabase } from "../../scripts/firebase"
+import { myRemoteConfig } from "../../scripts/firebase"
 import { List, SimpleListItem } from "@rmwc/list"
+import "@rmwc/list/styles"
+import { CircularProgress } from "@rmwc/circular-progress"
+import "@rmwc/circular-progress/styles"
 import "./listitem.scss"
-import { Link } from "gatsby"
 
 interface IProps {
   dbRef: string
@@ -26,6 +28,7 @@ interface IProps {
 
 interface IState {
   apps: App[]
+  isLoaded: boolean
 }
 
 interface App {
@@ -40,12 +43,18 @@ class FireListItem extends Component<IProps, IState> {
     super(props)
     this.state = {
       apps: [],
+      isLoaded: false,
     }
   }
+
   componentDidMount() {
-    const appsRef = getDatabase().ref(this.props.dbRef)
-    appsRef.on("value", snapshot => {
-      let apps = snapshot.val()
+    const config = myRemoteConfig
+    config.settings = {
+      fetchTimeoutMillis: 60000,
+      minimumFetchIntervalMillis: 0,
+    }
+    config.fetchAndActivate().then(() => {
+      let apps: App[] = JSON.parse(config.getString("apps"))
       let newState = []
       for (let app in apps) {
         if (apps.hasOwnProperty(app)) {
@@ -59,28 +68,46 @@ class FireListItem extends Component<IProps, IState> {
       }
       this.setState({
         apps: newState,
+        isLoaded: true,
       })
     })
   }
 
   render() {
-    return (
-      <>
-        <List twoLine>
-          {this.state.apps.map(app => {
-            return (
-              <Link to={app.path} className="appList" key={app.path}>
-                <SimpleListItem
-                  text={app.title}
-                  secondaryText={app.description}
-                  graphic={app.graphic}
-                />
-              </Link>
-            )
-          })}
-        </List>
-      </>
-    )
+    if (this.state.isLoaded) {
+      return (
+        <>
+          <List twoLine>
+            {this.state.apps.map(app => {
+              return (
+                <a href={`.${app.path}`} className="appList" key={app.path}>
+                  <SimpleListItem
+                    text={app.title}
+                    secondaryText={app.description}
+                    graphic={app.graphic}
+                  />
+                </a>
+              )
+            })}
+          </List>
+        </>
+      )
+    } else {
+      return (
+        <div
+          style={{
+            width: "100%",
+            paddingBottom: "5%",
+            paddingTop: "5%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <CircularProgress size={"xlarge"} />
+        </div>
+      )
+    }
   }
 }
 

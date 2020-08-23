@@ -15,7 +15,7 @@
  */
 
 import firebase from "firebase/app"
-import "firebase/database"
+import "firebase/remote-config"
 import "firebase/analytics"
 
 export const firebaseConfig = {
@@ -39,8 +39,5 @@ export function initFirebase() {
   return app
 }
 
-export function getDatabase() {
-  return initFirebase().database()
-}
-
 export default firebase
+export const myRemoteConfig = initFirebase().remoteConfig()
