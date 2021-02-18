@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/static" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/data" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.firebase" />
       <excludeFolder url="file://$MODULE_DIR$/public" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />

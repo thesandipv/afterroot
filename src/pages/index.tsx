@@ -46,7 +46,7 @@ export default class extends React.Component<IProps, IState> {
                 src={
                   // this.state.unsplashResponse
                   //   ? this.state.unsplashResponse.urls.regular
-                  "/assets/background.jpg"
+                  "/assets/background.webp"
                 }
                 alt="Unsplash Image"
               />
