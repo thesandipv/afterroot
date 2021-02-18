@@ -49,8 +49,10 @@ class Header extends Component {
               <Link to="/">
                 {icon}
                 <img
+                  height={64}
+                  width={64}
                   className="header-logo mdc-top-app-bar__navigation-icon"
-                  src="/assets/logo_64.png"
+                  src="/logos/ar_logo.svg"
                   alt="afterroot"
                 />
               </Link>
