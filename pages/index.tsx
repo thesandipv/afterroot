@@ -16,11 +16,11 @@
 
 import React from "react"
 import Layout from "src/components/Layout"
-import "./index.scss"
-import { Typography } from "@rmwc/typography"
-import SEO from "../components/SEO"
-import AppSection from "../components/AppSection"
-import { Unsplash } from "../types"
+import styles from "./index.module.scss"
+import Typography from "@mui/material/Typography"
+import SEO from "../src/components/SEO"
+import AppSection from "../src/components/AppSection"
+import { Unsplash } from "../src/types"
 
 interface IProps {}
 
@@ -39,10 +39,10 @@ export default class extends React.Component<IProps, IState> {
       <>
         <SEO title="AfterROOT" />
         <Layout title="AfterROOT" navIcon={null} disableFixAdjust={true}>
-          <main className="main">
-            <section className="eic-section">
+          <main className={styles.main}>
+            <section className={styles.eicSection}>
               <img
-                className="unsplash-image"
+                className={styles.unsplashImage}
                 src={
                   // this.state.unsplashResponse
                   //   ? this.state.unsplashResponse.urls.regular
@@ -50,16 +50,18 @@ export default class extends React.Component<IProps, IState> {
                 }
                 alt="Unsplash Image"
               />
-              <h1 className="title-bg text-overline fade-in-left color-white">
+              <h1
+                className={`${styles.titleBg} ${styles.textOverline} ${styles.fadeInLeft} ${styles.colorWhite}`}
+              >
                 Everything's
                 <br />
                 connected
               </h1>
               <br />
             </section>
-            <section className="section-1">
+            <section className={styles.section1}>
               <div
-                className="align-self-center color-white text-center"
+                className={`${styles.alignSelfCenter} ${styles.colorWhite} text-center`}
                 style={{
                   backgroundColor: "#00000083",
                   width: "100%",
@@ -67,13 +69,17 @@ export default class extends React.Component<IProps, IState> {
               >
                 <div style={{ margin: "48px 0px 48px" }}>
                   <Typography
-                    use="headline4"
-                    tag="h6"
-                    className="text-overline"
+                    variant="h4"
+                    component="h6"
+                    className={styles.textOverline}
                   >
                     About Us
                   </Typography>
-                  <Typography use="body1" tag="p" className="ml-5 mr-5">
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    className="ml-5 mr-5"
+                  >
                     AfterROOT, Started just for fun. But now it has aim. We go
                     to after the root. <br />
                     That's why it's named AfterROOT. Let's build the world
@@ -95,41 +101,42 @@ export default class extends React.Component<IProps, IState> {
     })
   }
 
+  /* TODO Unsplash image loading  
   private getRandomPhoto(): Promise<Unsplash> {
-    return new Promise<Unsplash>(async resolve => {
-      const searchUrl: string =
-        "https://api.unsplash.com/photos/random/" +
-        `?client_id=${process.env.UNSPLASH_KEY}`
-      try {
-        const rawResponse: Response = await fetch(searchUrl)
-
-        const response: Unsplash = JSON.parse(await rawResponse.text())
-        if (!response) {
+      return new Promise<Unsplash>(async (resolve) => {
+        const searchUrl: string =
+          "https://api.unsplash.com/photos/random/" +
+          `?client_id=${process.env.UNSPLASH_KEY}`
+        try {
+          const rawResponse: Response = await fetch(searchUrl)
+  
+          const response: Unsplash = JSON.parse(await rawResponse.text())
+          if (!response) {
+            resolve(undefined)
+            return
+          }
+          await this.registerDownload(response.id)
+          resolve(response.urls ? response : undefined)
+        } catch (err) {
           resolve(undefined)
-          return
         }
-        await this.registerDownload(response.id)
-        resolve(response.urls ? response : undefined)
-      } catch (err) {
-        resolve(undefined)
-      }
-    })
-  }
-
-  private registerDownload(photoId: string): Promise<void> {
-    return new Promise<void>(async resolve => {
-      const downloadUrl: string =
-        "https://api.unsplash.com/" +
-        `photos/${photoId}/download/?client_id=${process.env.UNSPLASH_KEY}`
-
-      try {
-        await fetch(downloadUrl)
-
-        resolve()
-      } catch (err) {
-        resolve()
-        console.log(err)
-      }
-    })
-  }
+      })
+    }
+  
+    private registerDownload(photoId: string): Promise<void> {
+      return new Promise<void>(async (resolve) => {
+        const downloadUrl: string =
+          "https://api.unsplash.com/" +
+          `photos/${photoId}/download/?client_id=${process.env.UNSPLASH_KEY}`
+  
+        try {
+          await fetch(downloadUrl)
+  
+          resolve()
+        } catch (err) {
+          resolve()
+          console.log(err)
+        }
+      })
+    }*/
 }
