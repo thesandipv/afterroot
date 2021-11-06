@@ -24,19 +24,18 @@ interface Props {
   title: string
   navIcon?: any
   headerTitle?: string
-  disableFixAdjust?: boolean
 }
 
 class Layout extends React.Component<Props> {
   render() {
-    let { children, title, navIcon, headerTitle, disableFixAdjust } = this.props
+    let { children, title, navIcon, headerTitle } = this.props
     return (
       <>
         <SEO title={title} />
         <Header
           title={headerTitle ? headerTitle : title}
           navIcon={navIcon}
-          disableFixAdjust={disableFixAdjust}
+          onDrawerToggle={() => {}}
         />
         <div>{children}</div>
         <Footer />

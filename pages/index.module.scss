@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-@import "../styles/global.scss";
-@import "~@material/button/mdc-button";
-@import "~@material/card/mdc-card";
-@import "~@material/layout-grid/mdc-layout-grid";
-@import "~@material/ripple/mdc-ripple";
+//@import "~@material/button/mdc-button";
+//@import "~@material/card/mdc-card";
+//@import "~@material/layout-grid/mdc-layout-grid";
+//@import "~@material/ripple/mdc-ripple";
 
 .main {
   display: block;
@@ -44,7 +43,7 @@
 .section-1 {
   display: flex;
   flex-wrap: wrap;
-  background-image: url("../../static/assets/about_us_section.jpg");
+  background-image: url("/assets/about_us_section.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

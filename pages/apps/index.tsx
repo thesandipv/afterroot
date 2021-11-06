@@ -14,4 +14,14 @@
  * limitations under the License.
  */
 
-import "./src/styles/global.scss"
+import React from "react"
+import Layout from "../../src/components/Layout"
+import AppSection from "../../src/components/AppSection"
+
+export default () => (
+  <>
+    <Layout title="Apps" navIcon="arrow_back">
+      <AppSection />
+    </Layout>
+  </>
+)

@@ -15,9 +15,8 @@
  */
 
 import React, { Component } from "react"
-import "./footer.scss"
+import styles from "./footer.module.scss"
 import config from "../../../data/SiteConfig"
-import { graphql, StaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
@@ -51,8 +50,8 @@ class Footer extends Component<IProps, IState> {
     return (
       <footer>
         <div className="dropdown-divider" />
-        <div className="footer-links mdc-typography--overline">
-          {this.state.extraLinks.map(link => {
+        <div className={`${styles.footerLinks} mdc-typography--overline`}>
+          {this.state.extraLinks.map((link) => {
             let separator, target
             if (
               this.state.extraLinks.indexOf(link) !=
@@ -65,7 +64,11 @@ class Footer extends Component<IProps, IState> {
             }
             return (
               <span key={link.title}>
-                <a className="footer-item" href={link.url} target={target}>
+                <a
+                  className={styles.footerItem}
+                  href={link.url}
+                  target={target}
+                >
                   {link.title}
                 </a>
                 {separator}
@@ -73,7 +76,7 @@ class Footer extends Component<IProps, IState> {
             )
           })}
         </div>
-        <ul className="social-list">
+        <ul className={styles.socialList}>
           <li>
             <a
               href={config.links.igUrl}
@@ -130,8 +133,8 @@ class Footer extends Component<IProps, IState> {
             </a>
           </li>
         </ul>
-        <div className="footer-links justify-content-center">
-          <StaticQuery
+        <div className={`${styles.footerLinks} justify-content-center`}>
+          {/*<StaticQuery TODO - different logic for build time
             query={graphql`
               query {
                 currentBuildDate {
@@ -153,7 +156,7 @@ class Footer extends Component<IProps, IState> {
                 {<a href={config.links.vsCode}>VS Code</a>}
               </span>
             )}
-          />
+          />*/}
         </div>
       </footer>
     )

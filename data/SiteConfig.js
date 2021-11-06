@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const _version = "0.1.5"
+const _version = "0.1.6"
 const config = {
   siteTitle: "AfterROOT - Everything's Connected", // Site title.
   siteTitleShort: "AfterROOT", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
@@ -47,7 +47,7 @@ const config = {
       isExternal: false,
     },
   ],
-  copyright: "© 2020 AfterROOT", // Copyright string for the footer of the website and RSS feed.
+  copyright: `©${Date.prototype.getFullYear()} AfterROOT`, // Copyright string for the footer of the website and RSS feed.
   version: _version,
   themeColor: "#1E88E5",
   backgroundColor: "#e0e0e0",
