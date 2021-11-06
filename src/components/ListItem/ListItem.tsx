@@ -16,11 +16,13 @@
 
 import React, { Component } from "react"
 import { myRemoteConfig } from "../../scripts/firebase"
-import { List, SimpleListItem } from "@rmwc/list"
-import "@rmwc/list/styles"
-import { CircularProgress } from "@rmwc/circular-progress"
-import "@rmwc/circular-progress/styles"
-import "./listitem.scss"
+import { fetchAndActivate, getValue } from "firebase/remote-config"
+import styles from "./listitem.module.scss"
+import List from "@mui/material/List"
+import ListItem from "@mui/material/ListItem"
+import ListItemIcon from "@mui/material/ListItemIcon"
+import ListItemText from "@mui/material/ListItemText"
+import CircularProgress from "@mui/material/CircularProgress"
 
 interface IProps {
   dbRef: string
@@ -48,13 +50,12 @@ class FireListItem extends Component<IProps, IState> {
   }
 
   componentDidMount() {
-    const config = myRemoteConfig
-    config.settings = {
+    myRemoteConfig.settings = {
       fetchTimeoutMillis: 60000,
       minimumFetchIntervalMillis: 0,
     }
-    config.fetchAndActivate().then(() => {
-      let apps: App[] = JSON.parse(config.getString("apps"))
+    fetchAndActivate(myRemoteConfig).then(() => {
+      let apps: App[] = JSON.parse(getValue(myRemoteConfig, "apps").asString())
       let newState = []
       for (let app in apps) {
         if (apps.hasOwnProperty(app)) {
@@ -77,15 +78,21 @@ class FireListItem extends Component<IProps, IState> {
     if (this.state.isLoaded) {
       return (
         <>
-          <List twoLine>
-            {this.state.apps.map(app => {
+          <List>
+            {this.state.apps.map((app) => {
               return (
-                <a href={`.${app.path}`} className="appList" key={app.path}>
-                  <SimpleListItem
-                    text={app.title}
-                    secondaryText={app.description}
-                    graphic={app.graphic}
-                  />
+                <a
+                  href={`.${app.path}`}
+                  className={styles.appList}
+                  key={app.path}
+                >
+                  <ListItem>
+                    <ListItemIcon>{app.graphic}</ListItemIcon>
+                    <ListItemText
+                      primary={app.title}
+                      secondary={app.description}
+                    />
+                  </ListItem>
                 </a>
               )
             })}
@@ -104,7 +111,7 @@ class FireListItem extends Component<IProps, IState> {
             justifyContent: "center",
           }}
         >
-          <CircularProgress size={"xlarge"} />
+          <CircularProgress />
         </div>
       )
     }

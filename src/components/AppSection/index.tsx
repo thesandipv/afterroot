@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-import React, {Component} from "react"
-import {Typography} from "@rmwc/typography"
-import {List} from "@rmwc/list"
-import "./appsection.scss"
+import React, { Component } from "react"
+import Typography from "@mui/material/Typography"
+import styles from "./appsection.module.scss"
+import indexStyles from "../../../pages/index.module.scss"
 import FireListItem from "../ListItem/ListItem"
+import List from "@mui/material/List"
 
 interface Props {
   title?: string
@@ -31,19 +32,19 @@ class AppSection extends Component<Props> {
     if (title != null) {
       sectionTitle = (
         <Typography
-          use="headline4"
-          className="text-overline text-center"
-          tag="h5"
+          variant="h4"
+          className={`${indexStyles.textOverline} text-center`}
+          component="h5"
         >
           {this.props.title}
         </Typography>
       )
     }
     return (
-      <section className="section-2">
+      <section className={styles.section2}>
         <div className="container">
           {sectionTitle}
-          <List twoLine>
+          <List>
             <FireListItem dbRef="apps" />
           </List>
         </div>

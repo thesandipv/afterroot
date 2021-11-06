@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-import firebase from "firebase/app"
+import { initializeApp } from "firebase/app"
+import { getRemoteConfig } from "firebase/remote-config"
 import "firebase/remote-config"
 import "firebase/analytics"
 
@@ -28,16 +29,16 @@ export const firebaseConfig = {
   appId: "1:910276298420:web:1fd8216cb2422070f979e1",
   measurementId: "G-LJ042LZHR5",
 }
-let app: firebase.app.App
+let app: any
 
 export function initFirebase() {
   if (app == null) {
     console.log("Initializing Firebase app")
-    app = firebase.initializeApp(firebaseConfig)
+    app = initializeApp(firebaseConfig)
   }
   console.log("Firebase app already initialized")
   return app
 }
 
-export default firebase
-export const myRemoteConfig = initFirebase().remoteConfig()
+export default app
+export const myRemoteConfig = getRemoteConfig()
