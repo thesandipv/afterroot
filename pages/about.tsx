@@ -1,4 +1,4 @@
-/*!
+/*
  * Copyright (C) 2020 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,21 +14,15 @@
  * limitations under the License.
  */
 
-@import "../../styles/theme";
-@import "../../styles/fonts";
-@import "~@material/top-app-bar/mdc-top-app-bar";
-@import "~@material/icon-button/mdc-icon-button";
+import React from "react"
+import Container from "../src/components/Container/container"
 
-.header-logo {
-  width: 48px;
-  fill: currentColor;
-}
-
-.mdc-top-app-bar__title {
-  font-weight: 400;
-  font-family: $mdc-typography-font-family;
-}
-
-.mdc-top-app-bar__navigation-icon {
-  vertical-align: middle;
+export default class About extends React.Component {
+  render() {
+    return (
+      <Container>
+        <h1>SOON</h1> {/*TODO Add About Page*/}
+      </Container>
+    )
+  }
 }

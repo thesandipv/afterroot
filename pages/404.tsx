@@ -15,14 +15,20 @@
  */
 
 import React from "react"
-import Container from "../components/Container/container"
+import Layout from "../src/components/Layout"
+import "./index.scss"
+import SEO from "../src/components/SEO"
 
-export default class About extends React.Component {
-  render() {
-    return (
-      <Container>
-        <h1>SOON</h1> {/*TODO Add About Page*/}
-      </Container>
-    )
-  }
-}
+export default () => (
+  <>
+    <SEO title="404 - Not Found - AfterROOT" />
+    <Layout headerTitle="AfterROOT" title="404 - Not Found - AfterROOT">
+      <main className="main">
+        <section className="eic-section">
+          <h1 className="title-bg text-overline">404 - Not Found</h1>
+          <br />
+        </section>
+      </main>
+    </Layout>
+  </>
+)

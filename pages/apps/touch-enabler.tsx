@@ -1,4 +1,4 @@
-/*!
+/*
  * Copyright (C) 2020 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,20 +14,11 @@
  * limitations under the License.
  */
 
-@import "~@material/list/mdc-list";
+import React from "react"
+import Layout from "../../src/components/Layout"
 
-.appList {
-  text-decoration: none;
-  color: black;
-}
-
-.appList:hover {
-  text-decoration: none;
-  color: black;
-}
-
-.mdc-list-item__graphic {
-  height: 48px;
-  width: 48px;
-  background-size: auto;
-}
+export default () => (
+  <>
+    <Layout title="ShowTouchesEnabler" navIcon="arrow_back" />
+  </>
+)

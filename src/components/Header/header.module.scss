@@ -1,4 +1,4 @@
-/*
+/*!
  * Copyright (C) 2020 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,14 +14,21 @@
  * limitations under the License.
  */
 
-import React from "react"
-import Layout from "../../components/Layout"
-import AppSection from "../../components/AppSection"
+@import "../../styles/theme";
+@import "../../styles/fonts";
+//@import "~@material/top-app-bar/mdc-top-app-bar";
+//@import "~@material/icon-button/mdc-icon-button";
 
-export default () => (
-  <>
-    <Layout title="Apps" navIcon="arrow_back">
-      <AppSection />
-    </Layout>
-  </>
-)
+.header-logo {
+  width: 48px;
+  fill: currentColor;
+}
+
+.mdc-top-app-bar__title {
+  font-weight: 400;
+  font-family: $mdc-typography-font-family;
+}
+
+.mdc-top-app-bar__navigation-icon {
+  vertical-align: middle;
+}

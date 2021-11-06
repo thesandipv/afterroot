@@ -15,9 +15,9 @@
  */
 
 import React from "react"
-import Layout from "../components/Layout"
-import { Typography } from "@rmwc/typography"
-import SEO from "../components/SEO"
+import Layout from "../src/components/Layout"
+import Typography from "@mui/material/Typography"
+import SEO from "../src/components/SEO"
 
 export default () => (
   <>
@@ -43,7 +43,7 @@ export default () => (
             Service. I will not use or share your information with anyone except
             as described in this Privacy Policy.
           </p>
-          <Typography use="headline6" tag="h6">
+          <Typography variant="h6" component="h6">
             Information Collection and Use
           </Typography>
           <p>
@@ -83,7 +83,7 @@ export default () => (
               </li>
             </ul>
           </div>
-          <Typography use="headline6" tag="h6">
+          <Typography variant="h6" component="h6">
             Log Data
           </Typography>
           <p>
@@ -97,7 +97,7 @@ export default () => (
             the Service, and other statistics.
           </p>
 
-          <Typography use="headline6" tag="h6">
+          <Typography variant="h6" component="h6">
             Cookies
           </Typography>
           <p>
@@ -115,7 +115,7 @@ export default () => (
             may not be able to use some portions of this Service.
           </p>
 
-          <Typography use="headline6" tag="h6">
+          <Typography variant="h6" component="h6">
             Service Providers
           </Typography>
           <p>
