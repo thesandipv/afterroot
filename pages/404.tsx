@@ -16,7 +16,7 @@
 
 import React from "react"
 import Layout from "../src/components/Layout"
-import "./index.scss"
+import "../src/styles/index.module.scss"
 import SEO from "../src/components/SEO"
 
 export default () => (

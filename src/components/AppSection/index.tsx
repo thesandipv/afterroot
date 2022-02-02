@@ -17,7 +17,7 @@
 import React, { Component } from "react"
 import Typography from "@mui/material/Typography"
 import styles from "./appsection.module.scss"
-import indexStyles from "../../../pages/index.module.scss"
+import indexStyles from "../../styles/index.module.scss"
 import FireListItem from "../ListItem/ListItem"
 import List from "@mui/material/List"
 

@@ -16,7 +16,7 @@
 
 import React from "react"
 import Layout from "src/components/Layout"
-import styles from "./index.module.scss"
+import styles from "../src/styles/index.module.scss"
 import Typography from "@mui/material/Typography"
 import SEO from "../src/components/SEO"
 import AppSection from "../src/components/AppSection"
@@ -89,7 +89,7 @@ export default class extends React.Component<IProps, IState> {
                 </div>
               </div>
             </section>
-            <AppSection title="Our Apps" />
+            {/*<AppSection title="Our Apps" />*/}
           </main>
         </Layout>
       </>

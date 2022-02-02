@@ -25,10 +25,10 @@ class Repo extends Component {
   componentDidMount() {
     let uiConfig: firebaseui.auth.Config = {
       callbacks: {
-        signInSuccessWithAuthResult: function() {
+        signInSuccessWithAuthResult: function () {
           return true
         },
-        uiShown: function() {
+        uiShown: function () {
           // @ts-ignore
           document.getElementById("loader").style.display = "none"
         },
