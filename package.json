@@ -97,5 +97,6 @@
   },
   "bugs": {
     "url": "https://github.com/thesandipv/afterroot/issues"
-  }
+  },
+  "packageManager": "yarn@3.1.1"
 }
