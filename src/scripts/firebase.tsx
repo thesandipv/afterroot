@@ -16,8 +16,7 @@
 
 import { initializeApp } from "firebase/app"
 import { getRemoteConfig } from "firebase/remote-config"
-import "firebase/remote-config"
-import "firebase/analytics"
+// import "firebase/analytics"
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCVgZRrAD3bWNq-wMsx0DA08BbbOaTk-qg",

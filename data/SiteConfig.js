@@ -47,7 +47,7 @@ const config = {
       isExternal: false,
     },
   ],
-  copyright: `©${Date.prototype.getFullYear()} AfterROOT`, // Copyright string for the footer of the website and RSS feed.
+  copyright: `©${Date.now()} AfterROOT`, // Copyright string for the footer of the website and RSS feed.
   version: _version,
   themeColor: "#1E88E5",
   backgroundColor: "#e0e0e0",

@@ -1,6 +1,6 @@
-const withPWA = require("next-pwa");
-const { config } = require("webpack");
-
+const withPWA = require("next-pwa")
+const { config } = require("webpack")
+/** @type {import("next").NextConfig} */
 module.exports = withPWA({
   pwa: {
     disable: process.env.NODE_ENV === "development",
@@ -8,4 +8,4 @@ module.exports = withPWA({
   },
   future: { webpack5: true },
   // productionBrowserSourceMaps: true,
-});
+})
