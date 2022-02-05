@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-.my-footer {
+.myFooter {
   display: flex;
   flex-direction: row;
   height: fit-content;
@@ -24,7 +24,7 @@
   width: 100%;
 }
 
-.footer-links {
+.footerLinks {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -34,17 +34,17 @@
   width: 100%;
 }
 
-.footer-item {
+.footerItem {
   color: #000;
   padding-left: 4px;
   padding-right: 4px;
 }
 
-.footer-item:hover {
+.footerItem:hover {
   text-decoration: none;
 }
 
-.social-list {
+.socialList {
   padding: 0;
   margin-bottom: 0;
   display: flex;
@@ -54,11 +54,11 @@
   align-items: center;
 }
 
-.social-list li {
+.socialList li {
   margin: 0 0.5rem;
 }
 
-.social-list a {
+.socialList a {
   color: #6f7476;
   transition: color 0.2s ease-in-out;
 }

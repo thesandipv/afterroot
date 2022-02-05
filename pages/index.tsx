@@ -16,7 +16,7 @@
 
 import React from "react"
 import Layout from "src/components/Layout"
-import styles from "../src/styles/index.module.scss"
+import styles from "src/styles/index.module.scss"
 import Typography from "@mui/material/Typography"
 import SEO from "../src/components/SEO"
 import AppSection from "../src/components/AppSection"
