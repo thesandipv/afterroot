@@ -39,7 +39,7 @@
     "sass": "^1.49.0"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.16.7",
+    "@babel/runtime": "^7.17.0",
     "@types/node": "^17.0.13",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.2",
@@ -63,5 +63,5 @@
   "bugs": {
     "url": "https://github.com/thesandipv/afterroot/issues"
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "npm"
 }
