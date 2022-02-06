@@ -16,6 +16,7 @@
 
 import { FirebaseApp, initializeApp } from "firebase/app"
 import { getRemoteConfig } from "firebase/remote-config"
+import { getAuth } from "firebase/auth"
 // import "firebase/analytics"
 
 export const firebaseConfig = {
@@ -40,3 +41,4 @@ export function initFirebase(): FirebaseApp {
 }
 
 export const myRemoteConfig = getRemoteConfig(initFirebase())
+export const auth = getAuth(initFirebase())
