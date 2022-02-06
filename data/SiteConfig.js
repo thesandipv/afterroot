@@ -27,6 +27,7 @@ const config = {
   dateFormat: "DD/MM/YYYY", // Date format for display.
   links: {
     githubUrl: "https://github.com/thesandipv",
+    githubProjectUrl: "https://github.com/thesandipv/afterroot",
     twitterUrl: "https://twitter.com/afterroot",
     mailUrl: "mailto:sandipvaghela311@gmail.com",
     igUrl: "https://www.instagram.com/afterroot/",
@@ -47,7 +48,11 @@ const config = {
       isExternal: false,
     },
   ],
-  copyright: `©${Date.now()} AfterROOT`, // Copyright string for the footer of the website and RSS feed.
+  // Copyright string for the footer of the website and RSS feed.
+  copyright: `©${new Date().getFullYear()} AfterROOT`,
+  commitSha: __COMMIT_SHA,
+  commitShaLong: __COMMIT_SHA_LONG,
+  buildDate: __BUILD_DATE,
   version: _version,
   themeColor: "#1E88E5",
   backgroundColor: "#e0e0e0",
@@ -55,6 +60,6 @@ const config = {
 
 // Validate
 // Make sure siteUrl doesn't have an ending forward slash
-if (config.siteUrl.substr(-1) === "/")
+if (config.siteUrl.substring(config.siteUrl.length - 1) === "/")
   config.siteUrl = config.siteUrl.slice(0, -1)
 module.exports = config

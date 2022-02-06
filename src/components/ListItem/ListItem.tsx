@@ -17,12 +17,14 @@
 import React, { Component } from "react"
 import { myRemoteConfig } from "../../scripts/firebase"
 import { fetchAndActivate, getValue } from "firebase/remote-config"
-import styles from "./listitem.module.scss"
 import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
 import ListItemIcon from "@mui/material/ListItemIcon"
 import ListItemText from "@mui/material/ListItemText"
 import CircularProgress from "@mui/material/CircularProgress"
+import { NextLinkComposed } from "../Link/Link"
+import { ListItemButton } from "@mui/material"
+import OpenInNewIcon from "@mui/icons-material/OpenInNew"
 
 interface IProps {
   dbRef: string
@@ -38,6 +40,7 @@ interface App {
   description: any
   path: string
   graphic: string
+  external: string
 }
 
 class FireListItem extends Component<IProps, IState> {
@@ -64,6 +67,7 @@ class FireListItem extends Component<IProps, IState> {
             description: apps[app].description,
             path: `/apps/${apps[app].path}`,
             graphic: `/logos/${apps[app].path}.png`,
+            external: apps[app].external,
           })
         }
       }
@@ -81,19 +85,21 @@ class FireListItem extends Component<IProps, IState> {
           <List>
             {this.state.apps.map((app) => {
               return (
-                <a
-                  href={`.${app.path}`}
-                  className={styles.appList}
-                  key={app.path}
-                >
-                  <ListItem>
-                    <ListItemIcon>{app.graphic}</ListItemIcon>
+                <ListItem disablePadding key={app.path}>
+                  <ListItemButton
+                    component={NextLinkComposed}
+                    to={app.external ? app.external : { pathname: app.path }}
+                  >
+                    <ListItemIcon>
+                      <img src={app.graphic} alt={app.title} />
+                    </ListItemIcon>
                     <ListItemText
                       primary={app.title}
                       secondary={app.description}
                     />
-                  </ListItem>
-                </a>
+                    {app.external ? <OpenInNewIcon /> : null}
+                  </ListItemButton>
+                </ListItem>
               )
             })}
           </List>

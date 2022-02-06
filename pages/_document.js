@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from "next/document"
-import SEO from "../src/components/SEO"
 
 export default class extends Document {
   static async getInitialProps(ctx) {
@@ -9,9 +8,8 @@ export default class extends Document {
   render() {
     return (
       <Html lang="en" dir="ltr">
-        <Head>
-          <SEO title={"AfterROOT"} />
-        </Head>
+        <Head />
+        {/*<SEO title={"AfterROOT"} />*/}
         <body>
           <Main />
           <NextScript />

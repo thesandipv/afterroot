@@ -18,13 +18,14 @@ import React from "react"
 import Layout from "../src/components/Layout"
 import Typography from "@mui/material/Typography"
 import SEO from "../src/components/SEO"
+import { ArrowBack } from "@mui/icons-material"
 
 export default () => (
   <>
     <SEO title="Privacy Policy" description="view AfterROOT's Privacy Policy" />
-    <Layout title="Privacy Policy" navIcon="arrow_back">
+    <Layout title="Privacy Policy" navIcon={<ArrowBack />}>
       <main className="main">
-        <div className="container mt-3">
+        <div className="container mt-3 mx-auto">
           <p>
             Sandip Vaghela (AfterROOT) built the Allusive(Pointer Replacer),
             ShowTouchesEnabler, WatchDone and Expenses app as an Ad Supported
@@ -43,7 +44,7 @@ export default () => (
             Service. I will not use or share your information with anyone except
             as described in this Privacy Policy.
           </p>
-          <Typography variant="h6" component="h6">
+          <Typography variant="h6" component="h6" mt={1}>
             Information Collection and Use
           </Typography>
           <p>
@@ -83,7 +84,7 @@ export default () => (
               </li>
             </ul>
           </div>
-          <Typography variant="h6" component="h6">
+          <Typography variant="h6" component="h6" mt={1}>
             Log Data
           </Typography>
           <p>
@@ -97,7 +98,7 @@ export default () => (
             the Service, and other statistics.
           </p>
 
-          <Typography variant="h6" component="h6">
+          <Typography variant="h6" component="h6" mt={1}>
             Cookies
           </Typography>
           <p>
@@ -115,7 +116,7 @@ export default () => (
             may not be able to use some portions of this Service.
           </p>
 
-          <Typography variant="h6" component="h6">
+          <Typography variant="h6" component="h6" mt={1}>
             Service Providers
           </Typography>
           <p>
@@ -142,7 +143,9 @@ export default () => (
             tasks assigned to them on our behalf. However, they are obligated
             not to disclose or use the information for any other purpose.
           </p>
-          <h6 className="mdc-typography--headline6">Security</h6>
+          <Typography variant="h6" component="h6" mt={1}>
+            Security
+          </Typography>
           <p>
             {" "}
             I value your trust in providing us your Personal Information, thus
@@ -151,7 +154,9 @@ export default () => (
             or method of electronic storage is 100% secure and reliable, and I
             cannot guarantee its absolute security.
           </p>
-          <h6 className="mdc-typography--headline6">Links to Other Sites</h6>
+          <Typography variant="h6" component="h6" mt={1}>
+            Links to Other Sites
+          </Typography>
           <p>
             This Service may contain links to other sites. If you click on a
             third-party link, you will be directed to that site. Note that these
@@ -160,7 +165,9 @@ export default () => (
             control over and assume no responsibility for the content, privacy
             policies, or practices of any third-party sites or services.
           </p>
-          <h6 className="mdc-typography--headline6">Children’s Privacy</h6>
+          <Typography variant="h6" component="h6" mt={1}>
+            Children’s Privacy
+          </Typography>
           <p>
             These Services do not address anyone under the age of 13. I do not
             knowingly collect personally identifiable information from children
@@ -170,9 +177,9 @@ export default () => (
             child has provided us with personal information, please contact me
             so that I will be able to do necessary actions.
           </p>
-          <h6 className="mdc-typography--headline6">
+          <Typography variant="h6" component="h6" mt={1}>
             Changes to This Privacy Policy
-          </h6>
+          </Typography>
           <p>
             {" "}
             I may update our Privacy Policy from time to time. Thus, you are
@@ -181,7 +188,9 @@ export default () => (
             page. These changes are effective immediately after they are posted
             on this page.
           </p>
-          <h6 className="mdc-typography--headline6">Contact Us</h6>
+          <Typography variant="h6" component="h6" mt={1}>
+            Contact Us
+          </Typography>
           <p>
             If you have any questions or suggestions about my Privacy Policy, do
             not hesitate to contact me.
