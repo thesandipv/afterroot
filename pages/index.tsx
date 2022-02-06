@@ -89,7 +89,7 @@ export default class extends React.Component<IProps, IState> {
                 </div>
               </div>
             </section>
-            {/*<AppSection title="Our Apps" />*/}
+            <AppSection title="Our Apps" />
           </main>
         </Layout>
       </>

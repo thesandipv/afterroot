@@ -18,6 +18,8 @@ import React from "react"
 import Header from "../Header"
 import Footer from "../Footer"
 import SEO from "../SEO"
+import { ThemeProvider } from "@mui/material/styles"
+import theme from "../../ui/theme"
 
 interface Props {
   children?: any
@@ -31,14 +33,16 @@ class Layout extends React.Component<Props> {
     let { children, title, navIcon, headerTitle } = this.props
     return (
       <>
-        <SEO title={title} />
-        <Header
-          title={headerTitle ? headerTitle : title}
-          navIcon={navIcon}
-          onDrawerToggle={() => {}}
-        />
-        <div>{children}</div>
-        <Footer />
+        <ThemeProvider theme={theme}>
+          <SEO title={title} />
+          <Header
+            title={headerTitle ? headerTitle : title}
+            navIcon={navIcon}
+            onDrawerToggle={() => {}}
+          />
+          <div>{children}</div>
+          <Footer />
+        </ThemeProvider>
       </>
     )
   }

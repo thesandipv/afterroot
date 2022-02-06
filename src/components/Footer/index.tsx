@@ -33,6 +33,7 @@ interface IState {
 }
 
 class Footer extends Component<IProps, IState> {
+  private COMMIT: any
   constructor(props: IProps) {
     super(props)
     this.state = {
@@ -134,6 +135,28 @@ class Footer extends Component<IProps, IState> {
           </li>
         </ul>
         <div className={`${styles.footerLinks} justify-content-center`}>
+          <span
+            className="mdc-typography"
+            style={{ fontSize: "0.7em", textAlign: "center" }}
+            id="_version"
+          >
+            {config.copyright} • v{config.version}-
+            {
+              <a
+                className=""
+                target="_blank"
+                href={`${config.links.githubProjectUrl}/tree/${config.commitShaLong}`}
+              >
+                {config.commitSha}
+              </a>
+            }{" "}
+            • Built on {config.buildDate}
+            <br />
+            Developed with {
+              <a href={config.links.jetbrains}>IntelliJ IDEA</a>
+            }{" "}
+            and {<a href={config.links.vsCode}>VS Code</a>}
+          </span>
           {/*<StaticQuery TODO - different logic for build time
             query={graphql`
               query {

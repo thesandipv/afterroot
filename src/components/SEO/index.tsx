@@ -53,7 +53,7 @@ class SEO extends React.Component<SEOProps> {
         <meta property="og:image" content="" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#FFFFFF" />
-        <link rel="icon" type="image/png" href={"/icons/favicon.png"} />
+        <link rel="icon" type="image/png" href={"favicon.ico"} />
         <link
           rel="apple-touch-icon"
           type="image/png"

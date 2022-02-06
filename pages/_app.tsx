@@ -1,9 +1,8 @@
 import "../src/styles/global.scss"
-// import "tailwindcss/tailwind.css"
-import React from "react"
+import type { AppProps } from "next/app"
 import Head from "next/head"
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>

@@ -14,15 +14,28 @@
  * limitations under the License.
  */
 
-import React, { CSSProperties } from "react"
+import { createTheme } from "@mui/material/styles"
 
-interface Props {
-  children?: any
-  styles?: CSSProperties
-}
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: "#63ccff",
+      main: "#009be5",
+      dark: "#006db3",
+    },
+    // type: "dark",
+    secondary: {
+      light: "#FF9663",
+      main: "#E54A00",
+      dark: "#B34600",
+    },
+  },
+  typography: {
+    fontFamily: "Ubuntu, sans-serif",
+  },
+  shape: {
+    borderRadius: 8,
+  },
+})
 
-export default ({ children, styles }: Props) => (
-  <div id="container" className="container" style={styles}>
-    {children}
-  </div>
-)
+export default theme
