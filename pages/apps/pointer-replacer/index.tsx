@@ -15,8 +15,8 @@
  */
 
 import React from "react"
-import Layout from "src/components/Layout"
-import Container from "src/components/Container/container"
+import Layout from "components/Layout"
+import Container from "components/Container/container"
 
 export default () => (
   <>
