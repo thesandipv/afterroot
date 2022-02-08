@@ -15,7 +15,7 @@
  */
 
 import React from "react"
-import Container from "../src/components/Container/container"
+import Container from "components/Container/container"
 
 export default class About extends React.Component {
   render() {

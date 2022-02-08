@@ -15,9 +15,9 @@
  */
 
 import React from "react"
-import Layout from "../src/components/Layout"
+import Layout from "components/Layout"
 import Typography from "@mui/material/Typography"
-import SEO from "../src/components/SEO"
+import SEO from "components/SEO"
 import { ArrowBack } from "@mui/icons-material"
 
 export default () => (
