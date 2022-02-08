@@ -15,8 +15,8 @@
  */
 
 import React from "react"
-import Layout from "../../src/components/Layout"
-import AppSection from "../../src/components/AppSection"
+import Layout from "components/Layout"
+import AppSection from "components/AppSection"
 
 export default () => (
   <>
