@@ -51,9 +51,7 @@ export default class extends React.Component<IProps, IState> {
                 }
                 alt="Unsplash Image"
               />
-              <h1
-                className={`${styles.titleBg} ${styles.textOverline} ${styles.fadeInLeft} ${styles.colorWhite}`}
-              >
+              <h1 className="titleBg fadeInLeft">
                 Everything's
                 <br />
                 connected
