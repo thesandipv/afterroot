@@ -145,6 +145,7 @@ class Footer extends Component<IProps, IState> {
               <a
                 className=""
                 target="_blank"
+                rel="noreferrer"
                 href={`${config.links.githubProjectUrl}/tree/${config.commitShaLong}`}
               >
                 {config.commitSha}

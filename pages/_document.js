@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document"
 
-export default class extends Document {
+class NextDocument extends Document {
   static async getInitialProps(ctx) {
     return await Document.getInitialProps(ctx)
   }
@@ -18,3 +18,5 @@ export default class extends Document {
     )
   }
 }
+
+export default NextDocument

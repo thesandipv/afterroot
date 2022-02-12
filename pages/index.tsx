@@ -29,7 +29,7 @@ interface IState {
   // unsplashResponse?: Unsplash
 }
 
-export default class extends React.Component<IProps, IState> {
+class PagesIndex extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props)
     // this.state = { unsplashResponse: undefined }
@@ -40,7 +40,7 @@ export default class extends React.Component<IProps, IState> {
       <>
         <SEO title="AfterROOT" />
         <Layout title="AfterROOT" navIcon={null}>
-          <main className={styles.main}>
+          <main className="block">
             <section className={styles.eicSection}>
               <img
                 className={styles.unsplashImage}
@@ -52,7 +52,7 @@ export default class extends React.Component<IProps, IState> {
                 alt="Unsplash Image"
               />
               <h1 className="titleBg fadeInLeft">
-                Everything's
+                Everything&apos;s
                 <br />
                 connected
               </h1>
@@ -60,7 +60,7 @@ export default class extends React.Component<IProps, IState> {
             </section>
             <section className={styles.section1}>
               <div
-                className={`${styles.alignSelfCenter} ${styles.colorWhite} text-center`}
+                className={`${styles.alignSelfCenter} text-white text-center`}
                 style={{
                   backgroundColor: "#00000083",
                   width: "100%",
@@ -81,8 +81,8 @@ export default class extends React.Component<IProps, IState> {
                   >
                     AfterROOT, Started just for fun. But now it has aim. We go
                     to after the root. <br />
-                    That's why it's named AfterROOT. Let's build the world
-                    better together from the ROOT.
+                    That&apos;s why it&apos;s named AfterROOT. Let&apos;s build
+                    the world better together from the ROOT.
                   </Typography>
                 </div>
               </div>
@@ -139,3 +139,5 @@ export default class extends React.Component<IProps, IState> {
       })
     }*/
 }
+
+export default PagesIndex

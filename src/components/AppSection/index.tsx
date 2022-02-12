@@ -27,7 +27,7 @@ interface Props {
 
 class AppSection extends Component<Props> {
   render() {
-    initFirebase()
+    // initFirebase()
     let sectionTitle = null
     const { title } = this.props
     if (title != null) {

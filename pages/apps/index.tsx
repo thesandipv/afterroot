@@ -18,10 +18,14 @@ import React from "react"
 import Layout from "components/Layout"
 import AppSection from "components/AppSection"
 
-export default () => (
-  <>
-    <Layout title="Apps" navIcon="arrow_back">
-      <AppSection />
-    </Layout>
-  </>
-)
+function PageApps() {
+  return (
+    <>
+      <Layout title="Apps" navIcon="arrow_back">
+        <AppSection />
+      </Layout>
+    </>
+  )
+}
+
+export default PageApps

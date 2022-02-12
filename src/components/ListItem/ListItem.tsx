@@ -15,7 +15,7 @@
  */
 
 import React, { Component } from "react"
-import { myRemoteConfig } from "../../scripts/firebase"
+import { myRemoteConfig } from "scripts/firebase"
 import { fetchAndActivate, getValue } from "firebase/remote-config"
 import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
