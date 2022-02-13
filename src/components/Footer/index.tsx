@@ -15,7 +15,6 @@
  */
 
 import React, { Component } from "react"
-import styles from "./footer.module.scss"
 import config from "../../../data/SiteConfig"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -34,6 +33,7 @@ interface IState {
 
 class Footer extends Component<IProps, IState> {
   private COMMIT: any
+
   constructor(props: IProps) {
     super(props)
     this.state = {
@@ -50,8 +50,8 @@ class Footer extends Component<IProps, IState> {
   render() {
     return (
       <footer>
-        <div className="dropdown-divider" />
-        <div className={`${styles.footerLinks} mdc-typography--overline`}>
+        <div className="mx-4 border-t border-slate-300/10" />
+        <div className="flex flex-wrap flex-row items-center justify-center p-2 w-full">
           {this.state.extraLinks.map((link) => {
             let separator, target
             if (
@@ -65,11 +65,7 @@ class Footer extends Component<IProps, IState> {
             }
             return (
               <span key={link.title}>
-                <a
-                  className={styles.footerItem}
-                  href={link.url}
-                  target={target}
-                >
+                <a className="px-2" href={link.url} target={target}>
                   {link.title}
                 </a>
                 {separator}
@@ -77,9 +73,10 @@ class Footer extends Component<IProps, IState> {
             )
           })}
         </div>
-        <ul className={styles.socialList}>
-          <li>
+        <ul className="flex flex-wrap justify-center items-center">
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.igUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on Instagram"
@@ -89,8 +86,9 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
-          <li>
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.ytUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on YouTube"
@@ -100,8 +98,9 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
-          <li>
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.fbUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on Facebook"
@@ -111,8 +110,9 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
-          <li>
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.twitterUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on Twitter"
@@ -122,8 +122,9 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faTwitter} />
             </a>
           </li>
-          <li>
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.githubUrl}
               rel="noopener noreferrer"
               aria-label="Projects on GitHub"
@@ -134,17 +135,14 @@ class Footer extends Component<IProps, IState> {
             </a>
           </li>
         </ul>
-        <div className={`${styles.footerLinks} justify-content-center`}>
-          <span
-            className="mdc-typography"
-            style={{ fontSize: "0.7em", textAlign: "center" }}
-            id="_version"
-          >
+        <div className="flex flex-wrap flex-row items-center justify-center p-2 w-full">
+          <span className="text-center text-xs" id="_version">
             {config.copyright} • v{config.version}-
             {
               <a
-                className=""
+                className="underline"
                 target="_blank"
+                rel="noreferrer"
                 href={`${config.links.githubProjectUrl}/tree/${config.commitShaLong}`}
               >
                 {config.commitSha}
@@ -152,34 +150,19 @@ class Footer extends Component<IProps, IState> {
             }{" "}
             • Built on {config.buildDate}
             <br />
-            Developed with {
-              <a href={config.links.jetbrains}>IntelliJ IDEA</a>
+            Developed with{" "}
+            {
+              <a className="underline" href={config.links.jetbrains}>
+                IntelliJ IDEA
+              </a>
             }{" "}
-            and {<a href={config.links.vsCode}>VS Code</a>}
+            and{" "}
+            {
+              <a className="underline" href={config.links.vsCode}>
+                VS Code
+              </a>
+            }
           </span>
-          {/*<StaticQuery TODO - different logic for build time
-            query={graphql`
-              query {
-                currentBuildDate {
-                  currentDate
-                }
-              }
-            `}
-            render={data => (
-              <span
-                className="mdc-typography"
-                style={{ fontSize: "0.7em", textAlign: "center" }}
-                id="_version"
-              >
-                {config.copyright} • v{config.version} • Built on{" "}
-                {data.currentBuildDate.currentDate}
-                <br />
-                Developed with{" "}
-                {<a href={config.links.jetbrains}>IntelliJ IDEA</a>} and{" "}
-                {<a href={config.links.vsCode}>VS Code</a>}
-              </span>
-            )}
-          />*/}
         </div>
       </footer>
     )
