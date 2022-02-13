@@ -23,9 +23,9 @@ import { ArrowBack } from "@mui/icons-material"
 export default () => (
   <>
     <SEO title="Privacy Policy" description="view AfterROOT's Privacy Policy" />
-    <Layout title="Privacy Policy" navIcon={<ArrowBack />}>
+    <Layout title="Privacy Policy">
       <main className="main">
-        <div className="container mt-3 mx-auto">
+        <div className="container my-3 mx-auto">
           <p>
             Sandip Vaghela (AfterROOT) built the Allusive(Pointer Replacer),
             ShowTouchesEnabler, WatchDone and Expenses app as an Ad Supported

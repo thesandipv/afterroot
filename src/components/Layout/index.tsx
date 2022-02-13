@@ -40,7 +40,7 @@ class Layout extends React.Component<Props> {
             navIcon={navIcon}
             onDrawerToggle={() => {}}
           />
-          <div>{children}</div>
+          {children}
           <Footer />
         </ThemeProvider>
       </>

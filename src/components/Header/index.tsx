@@ -15,11 +15,6 @@
  */
 
 import React, { Component } from "react"
-import styles from "./header.module.scss"
-import AppBar from "@mui/material/AppBar"
-import Box from "@mui/material/Box"
-import Toolbar from "@mui/material/Toolbar"
-import Typography from "@mui/material/Typography"
 import IconButton from "@mui/material/IconButton"
 
 export interface HeaderProps {
@@ -33,32 +28,26 @@ class Header extends Component<HeaderProps> {
     const { title, navIcon, onDrawerToggle } = this.props
     return (
       <>
-        <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">
-            <Toolbar>
-              <IconButton
-                onClick={onDrawerToggle}
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-              >
-                {navIcon}
-              </IconButton>
-              <img
-                height={64}
-                width={64}
-                className={`${styles.headerLogo} ${styles.mdcTopAppBar__navigationIcon}`}
-                src="/logos/ar_logo.svg"
-                alt="afterroot"
-              />
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                {title}
-              </Typography>
-            </Toolbar>
-          </AppBar>
-        </Box>
+        <div className="sticky top-0 w-full backdrop-blur flex-none bg-white dark:bg-slate-900/75">
+          <div className="relative flex items-center py-2 lg:px-4 mx-4 lg:mx-0 border-b border-slate-300/10">
+            {/*<IconButton
+              onClick={onDrawerToggle}
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              {navIcon}
+            </IconButton>*/}
+            <img
+              className="h-[48px] p-0.5 rounded-full bg-white"
+              src="/logos/ar_logo.svg"
+              alt="afterroot"
+            />
+            <p className="pl-4 flex-grow text-xl font-light">{title}</p>
+          </div>
+        </div>
       </>
     )
   }

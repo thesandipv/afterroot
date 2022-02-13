@@ -16,8 +16,6 @@
 
 import React from "react"
 import Layout from "components/Layout"
-import styles from "styles/index.module.scss"
-import Typography from "@mui/material/Typography"
 import SEO from "components/SEO"
 import AppSection from "components/AppSection"
 
@@ -41,49 +39,36 @@ class PagesIndex extends React.Component<IProps, IState> {
         <SEO title="AfterROOT" />
         <Layout title="AfterROOT" navIcon={null}>
           <main className="block">
-            <section className={styles.eicSection}>
-              <img
-                className={styles.unsplashImage}
-                src={
-                  // this.state.unsplashResponse
-                  //   ? this.state.unsplashResponse.urls.regular
-                  "/assets/background.webp"
-                }
-                alt="Unsplash Image"
-              />
-              <h1 className="titleBg fadeInLeft">
+            <section
+              className="sticky flex flex-wrap h-screen p-0
+                justify-center items-center
+                bg-fixed bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: 'url("/assets/background.webp")',
+              }}
+            >
+              <p className="titleBg fadeInLeft mt-[-80px]">
                 Everything&apos;s
                 <br />
                 connected
-              </h1>
+              </p>
               <br />
             </section>
-            <section className={styles.section1}>
+            <section className="flex flex-wrap border-b border-slate-300/10 mx-4">
               <div
-                className={`${styles.alignSelfCenter} text-white text-center`}
+                className={`self-center text-center`}
                 style={{
-                  backgroundColor: "#00000083",
                   width: "100%",
                 }}
               >
                 <div style={{ margin: "48px 0px 48px" }}>
-                  <Typography
-                    variant="h4"
-                    component="h6"
-                    className={styles.textOverline}
-                  >
-                    About Us
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    component="p"
-                    className="ml-5 mr-5"
-                  >
+                  <h6 className="text-4xl">About Us</h6>
+                  <p className="ml-5 mr-5">
                     AfterROOT, Started just for fun. But now it has aim. We go
                     to after the root. <br />
                     That&apos;s why it&apos;s named AfterROOT. Let&apos;s build
                     the world better together from the ROOT.
-                  </Typography>
+                  </p>
                 </div>
               </div>
             </section>
