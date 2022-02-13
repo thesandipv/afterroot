@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Sandip Vaghela
+ * Copyright (C) 2020-2022 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,10 +14,7 @@
  * limitations under the License.
  */
 
-import React, {Component} from "react"
-import {Typography} from "@rmwc/typography"
-import {List} from "@rmwc/list"
-import "./appsection.scss"
+import React, { Component } from "react"
 import FireListItem from "../ListItem/ListItem"
 
 interface Props {
@@ -26,26 +23,19 @@ interface Props {
 
 class AppSection extends Component<Props> {
   render() {
+    // initFirebase()
     let sectionTitle = null
     const { title } = this.props
     if (title != null) {
       sectionTitle = (
-        <Typography
-          use="headline4"
-          className="text-overline text-center"
-          tag="h5"
-        >
-          {this.props.title}
-        </Typography>
+        <h6 className="text-4xl text-center">{this.props.title}</h6>
       )
     }
     return (
-      <section className="section-2">
-        <div className="container">
+      <section>
+        <div className="container mx-auto">
           {sectionTitle}
-          <List twoLine>
-            <FireListItem dbRef="apps" />
-          </List>
+          <FireListItem dbRef="apps" />
         </div>
       </section>
     )

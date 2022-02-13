@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Sandip Vaghela
+ * Copyright (C) 2020-2022 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-import firebase from "firebase/app"
-import "firebase/remote-config"
-import "firebase/analytics"
+import { FirebaseApp, initializeApp } from "firebase/app"
+import { getRemoteConfig } from "firebase/remote-config"
+import { getAuth } from "firebase/auth"
+// import "firebase/analytics"
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCVgZRrAD3bWNq-wMsx0DA08BbbOaTk-qg",
@@ -28,16 +29,16 @@ export const firebaseConfig = {
   appId: "1:910276298420:web:1fd8216cb2422070f979e1",
   measurementId: "G-LJ042LZHR5",
 }
-let app: firebase.app.App
+let app: FirebaseApp
 
-export function initFirebase() {
+export function initFirebase(): FirebaseApp {
   if (app == null) {
     console.log("Initializing Firebase app")
-    app = firebase.initializeApp(firebaseConfig)
+    app = initializeApp(firebaseConfig)
   }
   console.log("Firebase app already initialized")
   return app
 }
 
-export default firebase
-export const myRemoteConfig = initFirebase().remoteConfig()
+export const myRemoteConfig = getRemoteConfig(initFirebase())
+export const auth = getAuth(initFirebase())

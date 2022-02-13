@@ -2,7 +2,8 @@
   "pointer-replacer": {
     "title": "Pointer Replacer",
     "description": "An Xposed Module to replace touch pointer",
-    "path": "pointer-replacer"
+    "path": "pointer-replacer",
+    "external": "https://pointer-replacer.web.app"
   },
   "touchenabler": {
     "title": "ShowTouchesEnabler",

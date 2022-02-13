@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Sandip Vaghela
+ * Copyright (C) 2020-2022 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,7 @@
  */
 
 import React, { Component } from "react"
-import "./footer.scss"
 import config from "../../../data/SiteConfig"
-import { graphql, StaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
@@ -34,6 +32,8 @@ interface IState {
 }
 
 class Footer extends Component<IProps, IState> {
+  private COMMIT: any
+
   constructor(props: IProps) {
     super(props)
     this.state = {
@@ -50,9 +50,9 @@ class Footer extends Component<IProps, IState> {
   render() {
     return (
       <footer>
-        <div className="dropdown-divider" />
-        <div className="footer-links mdc-typography--overline">
-          {this.state.extraLinks.map(link => {
+        <div className="mx-4 border-t border-slate-300/10" />
+        <div className="flex flex-wrap flex-row items-center justify-center p-2 w-full">
+          {this.state.extraLinks.map((link) => {
             let separator, target
             if (
               this.state.extraLinks.indexOf(link) !=
@@ -65,7 +65,7 @@ class Footer extends Component<IProps, IState> {
             }
             return (
               <span key={link.title}>
-                <a className="footer-item" href={link.url} target={target}>
+                <a className="px-2" href={link.url} target={target}>
                   {link.title}
                 </a>
                 {separator}
@@ -73,9 +73,10 @@ class Footer extends Component<IProps, IState> {
             )
           })}
         </div>
-        <ul className="social-list">
-          <li>
+        <ul className="flex flex-wrap justify-center items-center">
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.igUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on Instagram"
@@ -85,8 +86,9 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
-          <li>
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.ytUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on YouTube"
@@ -96,8 +98,9 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
-          <li>
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.fbUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on Facebook"
@@ -107,8 +110,9 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
-          <li>
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.twitterUrl}
               rel="noopener noreferrer"
               aria-label="Find AfterROOT on Twitter"
@@ -118,8 +122,9 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faTwitter} />
             </a>
           </li>
-          <li>
+          <li className="mx-2">
             <a
+              className="text-white/50 hover:text-white transition-colors"
               href={config.links.githubUrl}
               rel="noopener noreferrer"
               aria-label="Projects on GitHub"
@@ -130,30 +135,34 @@ class Footer extends Component<IProps, IState> {
             </a>
           </li>
         </ul>
-        <div className="footer-links justify-content-center">
-          <StaticQuery
-            query={graphql`
-              query {
-                currentBuildDate {
-                  currentDate
-                }
-              }
-            `}
-            render={data => (
-              <span
-                className="mdc-typography"
-                style={{ fontSize: "0.7em", textAlign: "center" }}
-                id="_version"
+        <div className="flex flex-wrap flex-row items-center justify-center p-2 w-full">
+          <span className="text-center text-xs" id="_version">
+            {config.copyright} • v{config.version}-
+            {
+              <a
+                className="underline"
+                target="_blank"
+                rel="noreferrer"
+                href={`${config.links.githubProjectUrl}/tree/${config.commitShaLong}`}
               >
-                {config.copyright} • v{config.version} • Built on{" "}
-                {data.currentBuildDate.currentDate}
-                <br />
-                Developed with{" "}
-                {<a href={config.links.jetbrains}>IntelliJ IDEA</a>} and{" "}
-                {<a href={config.links.vsCode}>VS Code</a>}
-              </span>
-            )}
-          />
+                {config.commitSha}
+              </a>
+            }{" "}
+            • Built on {config.buildDate}
+            <br />
+            Developed with{" "}
+            {
+              <a className="underline" href={config.links.jetbrains}>
+                IntelliJ IDEA
+              </a>
+            }{" "}
+            and{" "}
+            {
+              <a className="underline" href={config.links.vsCode}>
+                VS Code
+              </a>
+            }
+          </span>
         </div>
       </footer>
     )

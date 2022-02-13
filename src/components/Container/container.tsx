@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Sandip Vaghela
+ * Copyright (C) 2020-2022 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,19 @@
  * limitations under the License.
  */
 
-import React, {CSSProperties} from "react"
+import React, { CSSProperties } from "react"
 
 interface Props {
   children?: any
   styles?: CSSProperties
 }
 
-export default ({ children, styles }: Props) => (
-  <div id="container" className="container" style={styles}>
-    {children}
-  </div>
-)
+export default Container
+
+function Container({ children, styles }: Props) {
+  return (
+    <div id="container" className="container" style={styles}>
+      {children}
+    </div>
+  )
+}
