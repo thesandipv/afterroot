@@ -21,8 +21,12 @@ interface Props {
   styles?: CSSProperties
 }
 
-export default ({ children, styles }: Props) => (
-  <div id="container" className="container" style={styles}>
-    {children}
-  </div>
-)
+export default Container
+
+function Container({ children, styles }: Props) {
+  return (
+    <div id="container" className="container" style={styles}>
+      {children}
+    </div>
+  )
+}

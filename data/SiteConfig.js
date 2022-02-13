@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const _version = "0.1.6"
+const _version = "0.2.0"
 const config = {
   siteTitle: "AfterROOT - Everything's Connected", // Site title.
   siteTitleShort: "AfterROOT", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.

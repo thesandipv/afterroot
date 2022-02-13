@@ -15,11 +15,7 @@
  */
 
 import React, { Component } from "react"
-import Typography from "@mui/material/Typography"
-import styles from "./appsection.module.scss"
-import indexStyles from "../../styles/index.module.scss"
 import FireListItem from "../ListItem/ListItem"
-import { initFirebase } from "../../scripts/firebase"
 
 interface Props {
   title?: string
@@ -27,22 +23,16 @@ interface Props {
 
 class AppSection extends Component<Props> {
   render() {
-    initFirebase()
+    // initFirebase()
     let sectionTitle = null
     const { title } = this.props
     if (title != null) {
       sectionTitle = (
-        <Typography
-          variant="h4"
-          className={`${indexStyles.textOverline} text-center`}
-          component="h5"
-        >
-          {this.props.title}
-        </Typography>
+        <h6 className="text-4xl text-center">{this.props.title}</h6>
       )
     }
     return (
-      <section className={styles.section2}>
+      <section>
         <div className="container mx-auto">
           {sectionTitle}
           <FireListItem dbRef="apps" />

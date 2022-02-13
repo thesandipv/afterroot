@@ -17,8 +17,12 @@
 import React from "react"
 import Layout from "components/Layout"
 
-export default () => (
-  <>
-    <Layout title="ShowTouchesEnabler" navIcon="arrow_back" />
-  </>
-)
+function PageTouchEnabler() {
+  return (
+    <>
+      <Layout title="ShowTouchesEnabler" />
+    </>
+  )
+}
+
+export default PageTouchEnabler

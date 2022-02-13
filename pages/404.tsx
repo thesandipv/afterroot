@@ -16,19 +16,26 @@
 
 import React from "react"
 import Layout from "components/Layout"
-import "styles/index.module.scss"
 import SEO from "components/SEO"
 
-export default () => (
-  <>
-    <SEO title="404 - Not Found - AfterROOT" />
-    <Layout headerTitle="AfterROOT" title="404 - Not Found - AfterROOT">
-      <main className="main">
-        <section className="eic-section">
-          <h1 className="title-bg text-overline">404 - Not Found</h1>
-          <br />
-        </section>
-      </main>
-    </Layout>
-  </>
-)
+function Error404() {
+  return (
+    <>
+      <SEO title="404 - Not Found - AfterROOT" />
+      <Layout headerTitle="AfterROOT" title="404 - Not Found - AfterROOT">
+        <main className="main">
+          <section
+            className="flex flex-wrap h-screen p-0
+                justify-center items-center
+                bg-fixed bg-cover bg-center bg-no-repeat"
+          >
+            <h1 className="titleBg mt-[-80px]">404 - Not Found</h1>
+            <br />
+          </section>
+        </main>
+      </Layout>
+    </>
+  )
+}
+
+export default Error404
