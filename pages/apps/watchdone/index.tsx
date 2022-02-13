@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020-2022 Sandip Vaghela
+ * Copyright (C) 2020 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,31 +15,11 @@
  */
 
 import React, { Component } from "react"
-import FireListItem from "../ListItem/ListItem"
 
-interface Props {
-  title?: string
-}
-
-class AppSection extends Component<Props> {
+class Index extends Component<any, any> {
   render() {
-    // initFirebase()
-    let sectionTitle = null
-    const { title } = this.props
-    if (title != null) {
-      sectionTitle = (
-        <h6 className="text-4xl text-center">{this.props.title}</h6>
-      )
-    }
-    return (
-      <section>
-        <div className="container mx-auto">
-          {sectionTitle}
-          <FireListItem dbRef="apps" />
-        </div>
-      </section>
-    )
+    return <span>Test</span>
   }
 }
 
-export default AppSection
+export default Index

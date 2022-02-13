@@ -1,4 +1,4 @@
-/*
+/*!
  * Copyright (C) 2020-2022 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,32 +14,20 @@
  * limitations under the License.
  */
 
-import React, { Component } from "react"
-import FireListItem from "../ListItem/ListItem"
+//@import "~@material/list/mdc-list";
 
-interface Props {
-  title?: string
+.appList {
+  text-decoration: none;
+  color: black;
 }
 
-class AppSection extends Component<Props> {
-  render() {
-    // initFirebase()
-    let sectionTitle = null
-    const { title } = this.props
-    if (title != null) {
-      sectionTitle = (
-        <h6 className="text-4xl text-center">{this.props.title}</h6>
-      )
-    }
-    return (
-      <section>
-        <div className="container mx-auto">
-          {sectionTitle}
-          <FireListItem dbRef="apps" />
-        </div>
-      </section>
-    )
-  }
+.appList:hover {
+  text-decoration: none;
+  color: black;
 }
 
-export default AppSection
+.mdc-list-item__graphic {
+  height: 48px;
+  width: 48px;
+  background-size: auto;
+}

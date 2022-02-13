@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Sandip Vaghela
+ * Copyright (C) 2020-2022 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,28 +18,31 @@ import React from "react"
 import Header from "../Header"
 import Footer from "../Footer"
 import SEO from "../SEO"
+import { ThemeProvider } from "@mui/material/styles"
+import theme from "../../ui/theme"
 
 interface Props {
   children?: any
   title: string
   navIcon?: any
   headerTitle?: string
-  disableFixAdjust?: boolean
 }
 
 class Layout extends React.Component<Props> {
   render() {
-    let { children, title, navIcon, headerTitle, disableFixAdjust } = this.props
+    let { children, title, navIcon, headerTitle } = this.props
     return (
       <>
-        <SEO title={title} />
-        <Header
-          title={headerTitle ? headerTitle : title}
-          navIcon={navIcon}
-          disableFixAdjust={disableFixAdjust}
-        />
-        <div>{children}</div>
-        <Footer />
+        <ThemeProvider theme={theme}>
+          <SEO title={title} />
+          <Header
+            title={headerTitle ? headerTitle : title}
+            navIcon={navIcon}
+            onDrawerToggle={() => {}}
+          />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </>
     )
   }

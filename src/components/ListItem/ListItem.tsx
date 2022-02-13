@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Sandip Vaghela
+ * Copyright (C) 2020-2022 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,12 +15,16 @@
  */
 
 import React, { Component } from "react"
-import { myRemoteConfig } from "../../scripts/firebase"
-import { List, SimpleListItem } from "@rmwc/list"
-import "@rmwc/list/styles"
-import { CircularProgress } from "@rmwc/circular-progress"
-import "@rmwc/circular-progress/styles"
-import "./listitem.scss"
+import { myRemoteConfig } from "scripts/firebase"
+import { fetchAndActivate, getValue } from "firebase/remote-config"
+import List from "@mui/material/List"
+import ListItem from "@mui/material/ListItem"
+import ListItemIcon from "@mui/material/ListItemIcon"
+import ListItemText from "@mui/material/ListItemText"
+import CircularProgress from "@mui/material/CircularProgress"
+import Link from "../Link/Link"
+import { ListItemButton } from "@mui/material"
+import OpenInNewIcon from "@mui/icons-material/OpenInNew"
 
 interface IProps {
   dbRef: string
@@ -36,6 +40,7 @@ interface App {
   description: any
   path: string
   graphic: string
+  external: string
 }
 
 class FireListItem extends Component<IProps, IState> {
@@ -48,13 +53,12 @@ class FireListItem extends Component<IProps, IState> {
   }
 
   componentDidMount() {
-    const config = myRemoteConfig
-    config.settings = {
+    myRemoteConfig.settings = {
       fetchTimeoutMillis: 60000,
       minimumFetchIntervalMillis: 0,
     }
-    config.fetchAndActivate().then(() => {
-      let apps: App[] = JSON.parse(config.getString("apps"))
+    fetchAndActivate(myRemoteConfig).then(() => {
+      let apps: App[] = JSON.parse(getValue(myRemoteConfig, "apps").asString())
       let newState = []
       for (let app in apps) {
         if (apps.hasOwnProperty(app)) {
@@ -63,6 +67,7 @@ class FireListItem extends Component<IProps, IState> {
             description: apps[app].description,
             path: `/apps/${apps[app].path}`,
             graphic: `/logos/${apps[app].path}.png`,
+            external: apps[app].external,
           })
         }
       }
@@ -77,19 +82,28 @@ class FireListItem extends Component<IProps, IState> {
     if (this.state.isLoaded) {
       return (
         <>
-          <List twoLine>
-            {this.state.apps.map(app => {
+          <ul className="py-2">
+            {this.state.apps.map((app) => {
               return (
-                <a href={`.${app.path}`} className="appList" key={app.path}>
-                  <SimpleListItem
-                    text={app.title}
-                    secondaryText={app.description}
-                    graphic={app.graphic}
-                  />
-                </a>
+                <li key={app.path} className="items-center flex justify-start">
+                  <Link
+                    className="items-center flex grow justify-start px-4 cursor-pointer
+                    transition-colors text-left py-2 relative align-middle hover:bg-black/[0.04]"
+                    to={app.external ? app.external : { pathname: app.path }}
+                  >
+                    <div className="inline-flex flex-shrink-0 min-w-[56px]">
+                      <img src={app.graphic} alt={app.title} />
+                    </div>
+                    <div className="flex-auto min-w-0 my-[6px]">
+                      <span className="block text-base">{app.title}</span>
+                      <p className="block text-sm">{app.description}</p>
+                    </div>
+                    {app.external ? <OpenInNewIcon /> : null}
+                  </Link>
+                </li>
               )
             })}
-          </List>
+          </ul>
         </>
       )
     } else {
@@ -104,7 +118,7 @@ class FireListItem extends Component<IProps, IState> {
             justifyContent: "center",
           }}
         >
-          <CircularProgress size={"xlarge"} />
+          <CircularProgress />
         </div>
       )
     }

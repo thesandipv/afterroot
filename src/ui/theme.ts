@@ -14,32 +14,28 @@
  * limitations under the License.
  */
 
-import React, { Component } from "react"
-import FireListItem from "../ListItem/ListItem"
+import { createTheme } from "@mui/material/styles"
 
-interface Props {
-  title?: string
-}
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: "#63ccff",
+      main: "#009be5",
+      dark: "#006db3",
+    },
+    // type: "dark",
+    secondary: {
+      light: "#FF9663",
+      main: "#E54A00",
+      dark: "#B34600",
+    },
+  },
+  typography: {
+    fontFamily: "Ubuntu, sans-serif",
+  },
+  shape: {
+    borderRadius: 8,
+  },
+})
 
-class AppSection extends Component<Props> {
-  render() {
-    // initFirebase()
-    let sectionTitle = null
-    const { title } = this.props
-    if (title != null) {
-      sectionTitle = (
-        <h6 className="text-4xl text-center">{this.props.title}</h6>
-      )
-    }
-    return (
-      <section>
-        <div className="container mx-auto">
-          {sectionTitle}
-          <FireListItem dbRef="apps" />
-        </div>
-      </section>
-    )
-  }
-}
-
-export default AppSection
+export default theme

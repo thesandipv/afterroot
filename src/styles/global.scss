@@ -1,5 +1,5 @@
 /*!
- * Copyright (C) 2020 Sandip Vaghela
+ * Copyright (C) 2020-2022 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,51 @@
 
 @import "../styles/theme";
 @import "../styles/fonts";
-@import "~bootstrap/scss/bootstrap";
-@import "~@material/typography/mdc-typography.import";
+//@import "~bootstrap/scss/bootstrap";
+//noinspection CssInvalidAtRule
+@tailwind base;
+//noinspection CssInvalidAtRule
+@tailwind components;
+//noinspection CssInvalidAtRule
+@tailwind utilities;
 
-body {
-  margin: auto;
-  background: $mdc-theme-background;
-  font-family: $mdc-typography-font-family;
+@layer components {
+  @mixin titleBg {
+    @apply text-center text-7xl font-light absolute
+      text-white uppercase [letter-spacing:0.16667em] [line-height:1.2];
+  }
+
+  .titleBg {
+    @include titleBg();
+  }
+
+  @media (max-width: 1200px) {
+    .titleBg {
+      @include titleBg();
+      font-size: calc(1.575rem + 3.9vw);
+    }
+  }
+}
+
+@layer utilities {
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+  }
 }
 
 body,

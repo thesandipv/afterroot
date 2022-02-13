@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020-2022 Sandip Vaghela
+ * Copyright (C) 2020 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,19 +14,18 @@
  * limitations under the License.
  */
 
-import React, { CSSProperties } from "react"
+import React from "react"
+import Layout from "components/Layout"
+import AppSection from "components/AppSection"
 
-interface Props {
-  children?: any
-  styles?: CSSProperties
-}
-
-export default Container
-
-function Container({ children, styles }: Props) {
+function PageApps() {
   return (
-    <div id="container" className="container" style={styles}>
-      {children}
-    </div>
+    <>
+      <Layout title="Apps" navIcon="arrow_back">
+        <AppSection />
+      </Layout>
+    </>
   )
 }
+
+export default PageApps

@@ -1,5 +1,5 @@
 /*!
- * Copyright (C) 2020 Sandip Vaghela
+ * Copyright (C) 2020-2022 Sandip Vaghela
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,5 @@
  * limitations under the License.
  */
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:wght@300;400;500");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-$mdc-typography-font-family: unquote("Ubuntu, sans-serif");
-$font-family-base: $mdc-typography-font-family; //Bootstrap Font var
