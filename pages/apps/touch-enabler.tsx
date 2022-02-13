@@ -20,7 +20,7 @@ import Layout from "components/Layout"
 function PageTouchEnabler() {
   return (
     <>
-      <Layout title="ShowTouchesEnabler" navIcon="arrow_back" />
+      <Layout title="ShowTouchesEnabler" />
     </>
   )
 }

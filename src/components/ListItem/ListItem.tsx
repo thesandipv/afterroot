@@ -22,7 +22,7 @@ import ListItem from "@mui/material/ListItem"
 import ListItemIcon from "@mui/material/ListItemIcon"
 import ListItemText from "@mui/material/ListItemText"
 import CircularProgress from "@mui/material/CircularProgress"
-import { NextLinkComposed } from "../Link/Link"
+import Link from "../Link/Link"
 import { ListItemButton } from "@mui/material"
 import OpenInNewIcon from "@mui/icons-material/OpenInNew"
 
@@ -82,27 +82,28 @@ class FireListItem extends Component<IProps, IState> {
     if (this.state.isLoaded) {
       return (
         <>
-          <List>
+          <ul className="py-2">
             {this.state.apps.map((app) => {
               return (
-                <ListItem disablePadding key={app.path}>
-                  <ListItemButton
-                    component={NextLinkComposed}
+                <li key={app.path} className="items-center flex justify-start">
+                  <Link
+                    className="items-center flex grow justify-start px-4 cursor-pointer
+                    transition-colors text-left py-2 relative align-middle hover:bg-black/[0.04]"
                     to={app.external ? app.external : { pathname: app.path }}
                   >
-                    <ListItemIcon>
+                    <div className="inline-flex flex-shrink-0 min-w-[56px]">
                       <img src={app.graphic} alt={app.title} />
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={app.title}
-                      secondary={app.description}
-                    />
+                    </div>
+                    <div className="flex-auto min-w-0 my-[6px]">
+                      <span className="block text-base">{app.title}</span>
+                      <p className="block text-sm">{app.description}</p>
+                    </div>
                     {app.external ? <OpenInNewIcon /> : null}
-                  </ListItemButton>
-                </ListItem>
+                  </Link>
+                </li>
               )
             })}
-          </List>
+          </ul>
         </>
       )
     } else {

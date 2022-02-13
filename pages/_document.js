@@ -7,10 +7,10 @@ class NextDocument extends Document {
 
   render() {
     return (
-      <Html lang="en" dir="ltr">
+      <Html lang="en" dir="ltr" className="dark">
         <Head />
         {/*<SEO title={"AfterROOT"} />*/}
-        <body>
+        <body className="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
           <Main />
           <NextScript />
         </body>
