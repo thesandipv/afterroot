@@ -17,13 +17,8 @@
 import React, { Component } from "react"
 import { myRemoteConfig } from "scripts/firebase"
 import { fetchAndActivate, getValue } from "firebase/remote-config"
-import List from "@mui/material/List"
-import ListItem from "@mui/material/ListItem"
-import ListItemIcon from "@mui/material/ListItemIcon"
-import ListItemText from "@mui/material/ListItemText"
 import CircularProgress from "@mui/material/CircularProgress"
 import Link from "../Link/Link"
-import { ListItemButton } from "@mui/material"
 import OpenInNewIcon from "@mui/icons-material/OpenInNew"
 
 interface IProps {
