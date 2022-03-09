@@ -74,7 +74,7 @@ class Footer extends Component<IProps, IState> {
           })}
         </div>
         <ul className="flex flex-wrap justify-center items-center">
-          <li className="mx-2">
+          <li className="mx-2 w-4">
             <a
               className="text-white/50 hover:text-white transition-colors"
               href={config.links.igUrl}
@@ -86,7 +86,7 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
-          <li className="mx-2">
+          <li className="mx-2 w-4">
             <a
               className="text-white/50 hover:text-white transition-colors"
               href={config.links.ytUrl}
@@ -98,7 +98,7 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
-          <li className="mx-2">
+          <li className="mx-2 w-4">
             <a
               className="text-white/50 hover:text-white transition-colors"
               href={config.links.fbUrl}
@@ -110,7 +110,7 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
-          <li className="mx-2">
+          <li className="mx-2 w-4">
             <a
               className="text-white/50 hover:text-white transition-colors"
               href={config.links.twitterUrl}
@@ -122,7 +122,7 @@ class Footer extends Component<IProps, IState> {
               <FontAwesomeIcon icon={faTwitter} />
             </a>
           </li>
-          <li className="mx-2">
+          <li className="mx-2 w-4">
             <a
               className="text-white/50 hover:text-white transition-colors"
               href={config.links.githubUrl}
