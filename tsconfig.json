@@ -58,6 +58,6 @@
     "incremental": true,
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "public", ".cache"],
+  "exclude": ["node_modules", "public", ".cache", "blog"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
