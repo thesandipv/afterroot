@@ -55,7 +55,7 @@ const config = {
     ({
       navbar: {
         title: "AfterROOT",
-        hideOnScroll: true,
+        hideOnScroll: false,
         logo: {
           alt: "AfterROOT",
           src: "img/logo.svg",
