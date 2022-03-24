@@ -24,7 +24,7 @@ const config = {
   title: "AfterROOT Blog",
   tagline: "Everything is Connected",
   url: "https://afterroot.web.app",
-  baseUrl: "/",
+  baseUrl: "/ar/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "favicon.ico",
