@@ -212,7 +212,7 @@ function NavbarMobileSidebar({ sidebarShown, toggleSidebar }) {
 
 export default function Navbar() {
   const {
-    navbar: { hideOnScroll, style },
+    navbar: { hideOnScroll },
   } = useThemeConfig()
   const { isDarkTheme } = useColorMode()
   const mobileSidebar = useMobileSidebar()
