@@ -15,7 +15,7 @@
  */
 
 import { FirebaseApp, initializeApp } from "firebase/app"
-import { getRemoteConfig } from "firebase/remote-config"
+import { getRemoteConfig, RemoteConfig } from "firebase/remote-config"
 import { getAuth } from "firebase/auth"
 // import "firebase/analytics"
 
@@ -39,6 +39,9 @@ export function initFirebase(): FirebaseApp {
   console.log("Firebase app already initialized")
   return app
 }
-
-export const myRemoteConfig = getRemoteConfig(initFirebase())
+let _remoteConfig: RemoteConfig
+if (typeof window !== "undefined") {
+  _remoteConfig = getRemoteConfig(initFirebase())
+}
+export const myRemoteConfig = _remoteConfig
 export const auth = getAuth(initFirebase())
