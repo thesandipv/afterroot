@@ -27,7 +27,7 @@ const config = {
   baseUrl: "/ar/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "favicon.ico",
+  favicon: "/img/favicon.ico",
   organizationName: "afterroot",
   projectName: "blog",
 
