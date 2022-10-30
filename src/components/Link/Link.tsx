@@ -48,7 +48,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     }
 
     return (
-      <NextLink
+      (<NextLink
         href={to}
         prefetch={prefetch}
         as={linkAs}
@@ -57,10 +57,11 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
         shallow={shallow}
         passHref
         locale={locale}
-      >
-        <a ref={ref} {...other} />
-      </NextLink>
-    )
+        ref={ref}
+        {...other}>
+
+      </NextLink>)
+    );
   }
 )
 

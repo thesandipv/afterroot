@@ -1,11 +1,14 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "blog"
-	}
-],
-  "settings": {}
+    {
+      "path": "."
+    },
+    {
+      "path": "blog"
+    }
+  ],
+  "settings": {
+    "npm.packageManager": "npm",
+    "terminal.integrated.copyOnSelection": true
+  }
 }
