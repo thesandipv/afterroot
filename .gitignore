@@ -34,3 +34,4 @@ public/workbox*.js
 !.vscode/tasks.json
 .firebase/
 # blog*/
+public/ar/*
