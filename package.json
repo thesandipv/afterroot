@@ -8,7 +8,7 @@
     "develop": "next dev",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "build": "next build",
-    "export": "next build && next export",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "debug": "NODE_OPTIONS='--inspect' next dev"
