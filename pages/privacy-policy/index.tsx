@@ -29,7 +29,7 @@ function PagePrivacyPolicy() {
       />
       <Layout title="Privacy Policy">
         <main className="main">
-          <div className="container my-3 mx-auto">
+          <div className="m-3 w-auto">
             <p>
               Sandip Vaghela (AfterROOT) built the Allusive(Pointer Replacer),
               ShowTouchesEnabler, WatchDone and Expenses app as an Ad Supported

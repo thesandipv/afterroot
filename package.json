@@ -22,7 +22,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
     "@mui/system": "^5.10.10",
-    "firebase": "^9.12.1",
+    "firebase": "^9.16.0",
     "firebase-admin": "^10.3.0",
     "firebase-tools": "^11.15.0",
     "lodash": "^4.17.21",
