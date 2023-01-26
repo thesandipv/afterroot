@@ -10,9 +10,12 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-            node-version: '16'
-            cache: 'npm'
+          node-version: '16'
+          cache: 'npm'
+      - run: chmod +x ./blog/scripts/moveBlog.sh
       - run: npm install
+      - run: npm run build -w blog
+      - run: ./blog/scripts/moveBlog.sh
       - run: npm run export
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

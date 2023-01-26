@@ -26,9 +26,10 @@ class SEO extends React.Component<SEOProps> {
 
   render() {
     let { description, keywords, title, appName } = this.props
+    let headTitle = `${title} | AfterROOT`
     return (
       <Head>
-        <title>{title} | AfterROOT</title>
+        <title>{headTitle}</title>
         <meta name="application-name" content={appName} />
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords?.join(", ")} />
