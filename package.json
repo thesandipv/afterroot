@@ -62,5 +62,5 @@
   "bugs": {
     "url": "https://github.com/thesandipv/afterroot/issues"
   },
-  "packageManager": "npm@9.4.2"
+  "packageManager": "npm@9.8.1"
 }
