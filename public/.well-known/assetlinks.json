@@ -1,0 +1,77 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.afterroot.thinkersspace",
+      "sha256_cert_fingerprints": [
+        "1A:F7:C8:D5:DB:51:31:E1:D2:04:1F:0F:EE:A1:49:4F:DA:E4:17:13:1A:DC:73:E3:BF:04:79:84:FE:4D:65:71"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.afterroot.thinkersspace.debug",
+      "sha256_cert_fingerprints": [
+        "1A:F7:C8:D5:DB:51:31:E1:D2:04:1F:0F:EE:A1:49:4F:DA:E4:17:13:1A:DC:73:E3:BF:04:79:84:FE:4D:65:71"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.afterroot.watchdone",
+      "sha256_cert_fingerprints": [
+        "4B:2A:BC:D0:36:C5:18:AB:55:DF:12:7D:62:90:D3:96:D5:C9:5D:18:D8:E8:88:17:CA:64:F6:4D:78:11:7E:C5",
+        "0E:B3:20:B9:C2:89:86:C5:DF:17:C3:BE:47:BF:07:9B:4A:6A:38:85:C5:C3:6F:04:EA:CE:9E:E5:14:9B:4D:D2",
+        "04:E9:E9:71:1E:90:1C:94:8D:68:85:E5:EF:B5:76:15:1F:B9:2E:F0:8C:0B:6B:D7:FC:A6:8F:59:38:8D:38:F9",
+        "94:7D:77:DD:96:2F:41:65:A1:9E:3D:31:7B:ED:55:8B:58:2F:6F:4E:58:78:FE:E3:CE:B6:F3:CB:09:F8:25:03"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.afterroot.watchdone.debug",
+      "sha256_cert_fingerprints": [
+        "0E:B3:20:B9:C2:89:86:C5:DF:17:C3:BE:47:BF:07:9B:4A:6A:38:85:C5:C3:6F:04:EA:CE:9E:E5:14:9B:4D:D2"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.afterroot.tspaceadmin",
+      "sha256_cert_fingerprints": [
+        "1A:F7:C8:D5:DB:51:31:E1:D2:04:1F:0F:EE:A1:49:4F:DA:E4:17:13:1A:DC:73:E3:BF:04:79:84:FE:4D:65:71"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.afterroot.allusive2",
+      "sha256_cert_fingerprints": [
+        "42:1D:C6:90:0E:3E:23:4A:9E:25:5F:C1:D0:0C:8E:24:15:F4:D1:4A:1D:8D:A8:FD:D1:F9:90:3E:3E:6F:99:D3"
+      ]
+    }
+  }
+]
