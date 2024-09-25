@@ -47,6 +47,11 @@ const config = {
       url: "/privacy-policy",
       isExternal: false,
     },
+     {
+      title: "Contact Us",
+      url: "/contact",
+      isExternal: false,
+    },
   ],
   // Copyright string for the footer of the website and RSS feed.
   copyright: `©${new Date().getFullYear()} AfterROOT`,
