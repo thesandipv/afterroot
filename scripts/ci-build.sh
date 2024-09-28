@@ -1,10 +1,13 @@
 chmod +x ./scripts/build.sh
-chmod +x ./blog/scripts/moveBlog.sh
-echo Run npm install on root
+
+echo ">> afterroot: Run npm install on root"
 npm install
+
 cd ./blog
-echo Run npm install on blog
+
+echo ">> afterroot: Run npm install on blog"
 npm install
+
+echo ">> afterroot: Running build.sh"
 cd ..
 ./scripts/build.sh
-# npm run export
