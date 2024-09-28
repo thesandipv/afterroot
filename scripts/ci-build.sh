@@ -7,4 +7,4 @@ echo Run npm install on blog
 npm install
 cd ..
 ./scripts/build.sh
-npm run export
+# npm run export

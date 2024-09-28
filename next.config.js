@@ -22,5 +22,6 @@ module.exports = withPWA({
     COMMIT_SHA_LONG: longCommitHash,
     BUILD_DATE: buildDate,
   },
+  output: "export"
   // productionBrowserSourceMaps: true,
 })
