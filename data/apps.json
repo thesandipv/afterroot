@@ -15,9 +15,9 @@
     "description": "Watchlist Manager with 'Mark as Watched' function",
     "path": "watchdone"
   },
-  "mytaco": {
-    "title": "MyTACO",
-    "description": "Data Monitoring App for TACO Employee",
-    "path": "mytaco"
+  "dynamics": {
+    "title": "Dynamics",
+    "description": "Dynamic Data Monitoring App for Enterprise",
+    "path": "dynamics"
   }
 }
