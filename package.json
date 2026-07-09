@@ -38,7 +38,7 @@
     "sass": "^1.55.0"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.19.4",
+    "@babel/runtime": "^8.0.0",
     "@types/node": "^20.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
