@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "lint",
+      "problemMatcher": [
+        "$eslint-stylish",
+        "$eslint-compact"
+      ],
+      "label": "npm: lint",
+      "detail": "eslint ."
+    },
+    {
+      "type": "npm",
+      "script": "lint:fix",
+      "problemMatcher": [
+        "$eslint-compact",
+        "$eslint-stylish"
+      ],
+      "label": "npm: lint:fix",
+      "detail": "eslint --fix"
+    }
+  ]
+}
