@@ -1,4 +1,5 @@
 import antfu from "@antfu/eslint-config"
+import eslintPluginTailwindcss from "eslint-plugin-tailwindcss"
 
 export default antfu(
   {
@@ -20,6 +21,16 @@ export default antfu(
     files: ["src/lib/components/ui/**/*.svelte"],
     rules: {
       "svelte/no-navigation-without-resolve": "off",
+    },
+  },
+  {
+    extends: [eslintPluginTailwindcss.configs.recommended],
+    settings: {
+      tailwindcss:
+      /** @type {import('eslint-plugin-tailwindcss').PluginSettings} */
+      ({
+        cssConfigPath: "./src/routes/layout.css",
+      }),
     },
   },
 )
