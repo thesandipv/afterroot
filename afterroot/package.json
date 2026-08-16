@@ -15,6 +15,11 @@
     "test:unit": "vitest",
     "test": "npm run test:unit -- --run"
   },
+  "dependencies": {
+    "@icons-pack/svelte-simple-icons": "^7.2.0",
+    "bits-ui": "^2.18.1",
+    "firebase": "^12.17.1"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^9.3.0",
     "@eslint/js": "^10.0.1",

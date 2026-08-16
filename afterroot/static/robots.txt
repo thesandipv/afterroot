@@ -1,3 +1,2 @@
-# allow crawling everything by default
 User-agent: *
-Disallow:
+sitemap: https://afterroot.web.app/sitemap.xml

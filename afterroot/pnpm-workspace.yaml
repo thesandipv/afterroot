@@ -1,0 +1,7 @@
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
+allowBuilds:
+  "@firebase/util": true
+  protobufjs: true
