@@ -4,11 +4,14 @@
       "path": "."
     },
     {
+      "name": "ar-svelte",
+      "path": "afterroot"
+    },
+    {
       "path": "blog"
     }
   ],
   "settings": {
-    "npm.packageManager": "npm",
     "terminal.integrated.copyOnSelection": true
   }
 }
