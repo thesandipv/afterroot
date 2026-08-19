@@ -2,7 +2,7 @@ export const siteConfig = {
   siteTitle: "AfterROOT - Everything's Connected",
   siteTitleShort: "AfterROOT",
   siteTitleAlt: "AfterROOT",
-  siteLogo: "/logos/logo_512.png",
+  siteLogo: "/logos/icon-512x512.png",
   siteUrl: "https://afterroot.web.app",
   pathPrefix: "/",
   siteDescription: "Everything's Connected.",

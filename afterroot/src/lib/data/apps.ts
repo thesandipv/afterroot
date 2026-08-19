@@ -17,13 +17,6 @@ export const defaultApps: AppItem[] = [
     external: "https://pointer-replacer.web.app",
   },
   {
-    id: "touchenabler",
-    title: "ShowTouchesEnabler",
-    description: "Helper for enabling 'Show Taps' directly from Quick Settings",
-    path: "/apps/touch-enabler",
-    graphic: "/logos/touch-enabler.png",
-  },
-  {
     id: "watchdone",
     title: "WatchDone",
     description: "Watchlist Manager with 'Mark as Watched' function",
@@ -35,6 +28,6 @@ export const defaultApps: AppItem[] = [
     title: "Dynamics",
     description: "Dynamic Data Monitoring App for Enterprise",
     path: "/apps/dynamics",
-    graphic: "/logos/logo_512.png",
+    graphic: "/logos/icon-512x512.png",
   },
 ]

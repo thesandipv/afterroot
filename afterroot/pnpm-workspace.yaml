@@ -5,3 +5,6 @@ trustPolicy: no-downgrade
 allowBuilds:
   "@firebase/util": true
   protobufjs: true
+
+trustPolicyExclude:
+  - chokidar@4.0.3
